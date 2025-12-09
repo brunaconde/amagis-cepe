@@ -1,67 +1,6 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
-import { Send, Shield, CheckCircle } from "lucide-react";
+import { Shield, CheckCircle } from "lucide-react";
 
 const FormSection = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    nome: "",
-    email: "",
-    telefone: "",
-    relacaoAmagis: "",
-    idioma: "",
-    duracao: "",
-    cidade: "",
-    privacidade: false
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.privacidade) {
-      toast({
-        title: "Atenção",
-        description: "Você precisa aceitar a política de privacidade para continuar.",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    toast({
-      title: "Formulário enviado com sucesso!",
-      description: "Entraremos em contato em breve para apresentar seu desconto exclusivo.",
-    });
-    
-    setIsSubmitting(false);
-    setFormData({
-      nome: "",
-      email: "",
-      telefone: "",
-      relacaoAmagis: "",
-      idioma: "",
-      duracao: "",
-      cidade: "",
-      privacidade: false
-    });
-  };
-
   return (
     <section className="section-padding bg-cepe-blue-dark relative overflow-hidden" id="formulario">
       {/* Background decoration */}
@@ -106,147 +45,20 @@ const FormSection = () => {
             </div>
           </div>
 
-          {/* Form */}
-          <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card">
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="space-y-2">
-                <Label htmlFor="nome" className="text-foreground">Nome Completo *</Label>
-                <Input
-                  id="nome"
-                  placeholder="Seu nome completo"
-                  value={formData.nome}
-                  onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
-                  required
-                  className="bg-background"
-                />
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-foreground">E-mail *</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="seu@email.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                    className="bg-background"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="telefone" className="text-foreground">Telefone (com DDD) *</Label>
-                  <Input
-                    id="telefone"
-                    type="tel"
-                    placeholder="(00) 00000-0000"
-                    value={formData.telefone}
-                    onChange={(e) => setFormData({ ...formData, telefone: e.target.value })}
-                    required
-                    className="bg-background"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <Label className="text-foreground">Relação com a AMAGIS *</Label>
-                <Select
-                  value={formData.relacaoAmagis}
-                  onValueChange={(value) => setFormData({ ...formData, relacaoAmagis: value })}
-                  required
-                >
-                  <SelectTrigger className="bg-background">
-                    <SelectValue placeholder="Selecione sua relação" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="associado">Associado</SelectItem>
-                    <SelectItem value="dependente">Dependente</SelectItem>
-                    <SelectItem value="colaborador">Colaborador</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label className="text-foreground">Idioma de Interesse *</Label>
-                  <Select
-                    value={formData.idioma}
-                    onValueChange={(value) => setFormData({ ...formData, idioma: value })}
-                    required
-                  >
-                    <SelectTrigger className="bg-background">
-                      <SelectValue placeholder="Selecione o idioma" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="espanhol">Espanhol</SelectItem>
-                      <SelectItem value="ingles">Inglês</SelectItem>
-                      <SelectItem value="portugues">Português</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="space-y-2">
-                  <Label className="text-foreground">Duração Preferencial *</Label>
-                  <Select
-                    value={formData.duracao}
-                    onValueChange={(value) => setFormData({ ...formData, duracao: value })}
-                    required
-                  >
-                    <SelectTrigger className="bg-background">
-                      <SelectValue placeholder="Selecione a duração" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="2-semanas">2 Semanas</SelectItem>
-                      <SelectItem value="3-semanas">3 Semanas</SelectItem>
-                      <SelectItem value="4-semanas">4 Semanas</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="cidade" className="text-foreground">Cidade de Origem *</Label>
-                <Input
-                  id="cidade"
-                  placeholder="Sua cidade"
-                  value={formData.cidade}
-                  onChange={(e) => setFormData({ ...formData, cidade: e.target.value })}
-                  required
-                  className="bg-background"
-                />
-              </div>
-
-              <div className="flex items-start space-x-3 pt-2">
-                <Checkbox
-                  id="privacidade"
-                  checked={formData.privacidade}
-                  onCheckedChange={(checked) => setFormData({ ...formData, privacidade: checked as boolean })}
-                  className="mt-0.5"
-                />
-                <Label htmlFor="privacidade" className="text-sm text-muted-foreground font-normal leading-snug cursor-pointer">
-                  Concordo com a <a href="#" className="text-primary hover:underline">Política de Privacidade</a> e em receber contatos do CEPE Idiomas.
-                </Label>
-              </div>
-
-              <Button
-                type="submit"
-                variant="cta"
-                size="xl"
-                className="w-full"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-foreground/30 border-t-foreground rounded-full animate-spin" />
-                    Enviando...
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5" />
-                    Receber Meu Desconto e Contato!
-                  </>
-                )}
-              </Button>
-            </form>
+          {/* Google Forms Embed */}
+          <div className="bg-card rounded-2xl shadow-card overflow-hidden">
+            <iframe 
+              src="https://docs.google.com/forms/d/e/1FAIpQLSe0TkAQey5KpONkK4k2UvbvUon_jtKqViHucSy3Z8UTM6Fkag/viewform?embedded=true" 
+              width="100%" 
+              height="1388"
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+              className="w-full"
+              title="Formulário de Interesse CEPE Idiomas"
+            >
+              Carregando formulário...
+            </iframe>
           </div>
         </div>
       </div>
