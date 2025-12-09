@@ -13,8 +13,9 @@ const PartnershipSection = () => {
             AMAGIS e CEPE Idiomas: Uma Conexão para o Seu Crescimento Global
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            A AMAGIS está sempre buscando os melhores benefícios para os membros da sua comunidade. 
-            Por isso, firmamos esta parceria especial com o CEPE Idiomas, uma das mais conceituadas escolas de intercâmbio em Córdoba, Argentina.
+            A AMAGIS está sempre buscando os melhores benefícios para os membros da sua comunidade. Por isso, firmamos
+            esta parceria especial com o CEPE Idiomas, uma das mais conceituadas escolas de intercâmbio em Córdoba,
+            Argentina.
           </p>
         </div>
 
@@ -29,7 +30,7 @@ const PartnershipSection = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="flex items-center">
               <div className="w-12 h-12 bg-cepe-gold rounded-full flex items-center justify-center shadow-glow">
                 <span className="text-2xl">🤝</span>
@@ -47,11 +48,11 @@ const PartnershipSection = () => {
           <div className="space-y-6">
             <div className="bg-gradient-to-br from-cepe-blue/5 to-cepe-gold/5 rounded-2xl p-6 border border-border">
               <p className="text-foreground leading-relaxed">
-                Esta é a sua chance de aprimorar um novo idioma, mergulhar em uma cultura rica e colecionar memórias inesquecíveis, 
-                com a qualidade e a confiança que você merece.
+                Esta é a sua chance de aprimorar um novo idioma, mergulhar em uma cultura rica e colecionar memórias
+                inesquecíveis, com a qualidade e a confiança que você merece.
               </p>
               <p className="text-foreground leading-relaxed mt-4">
-                Escolha entre <strong>Espanhol, Inglês ou Português</strong> e aproveite programas de <strong>2, 3 ou 4 semanas</strong> 
+                Escolha entre os programas de <strong>2, 3 ou 4 semanas</strong>
                 com o melhor suporte e experiência de aprendizado.
               </p>
             </div>
@@ -63,9 +64,7 @@ const PartnershipSection = () => {
               </div>
               <div>
                 <h4 className="font-bold text-foreground">Parceria Exclusiva</h4>
-                <p className="text-sm text-muted-foreground">
-                  Acesso a um benefício que ninguém mais tem
-                </p>
+                <p className="text-sm text-muted-foreground">Acesso a um benefício que ninguém mais tem</p>
               </div>
             </div>
           </div>
