@@ -52,8 +52,8 @@ const PartnershipSection = () => {
                 inesquecíveis, com a qualidade e a confiança que você merece.
               </p>
               <p className="text-foreground leading-relaxed mt-4">
-                Escolha entre os programas de <strong>2, 3 ou 4 semanas</strong>
-                com o melhor suporte e experiência de aprendizado.
+                Escolha a duração entre <strong>2, 3 ou 4 semanas</strong> e aproveite o programa com o melhor suporte e
+                experiência de aprendizado.
               </p>
             </div>
 
