@@ -23,13 +23,13 @@ const BenefitSection = () => {
               Oferta Exclusiva
             </div>
 
-            <h2 className="heading-lg">
-              15% de Desconto EXCLUSIVO: Realize o Seu Sonho e de Sua Família!
-            </h2>
+            <h2 className="heading-lg">15% de Desconto EXCLUSIVO: Realize o seu sonho e de sua família!</h2>
 
             <p className="text-lg text-primary-foreground/90">
-              Como membro da comunidade AMAGIS, você garante um benefício único: <strong className="text-cepe-gold">15% de desconto</strong> sobre o valor tabelado em qualquer programa de intercâmbio do CEPE Idiomas! 
-              Seja para aprender ou aprimorar o espanhol, inglês ou português, este benefício é a sua porta de entrada para uma aventura enriquecedora, com uma economia significativa.
+              Como membro da comunidade AMAGIS, você garante um benefício único:{" "}
+              <strong className="text-cepe-gold">15% de desconto</strong> sobre o valor tabelado em qualquer programa de
+              intercâmbio do CEPE Idiomas! Seja para aprender ou aprimorar o espanhol, inglês ou português, este
+              benefício é a sua porta de entrada para uma aventura enriquecedora, com uma economia significativa.
             </p>
 
             <ul className="space-y-4">
@@ -37,7 +37,7 @@ const BenefitSection = () => {
                 "Válido para qualquer duração: 2, 3 ou 4 semanas",
                 "Válido para qualquer idioma: Espanhol, Inglês ou Português",
                 "Extensivo a dependentes e colaboradores AMAGIS",
-                "Desconto exclusivo sobre o valor tabelado"
+                "Desconto exclusivo sobre o valor tabelado",
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <Star className="w-5 h-5 text-cepe-gold flex-shrink-0 mt-0.5" />
@@ -56,7 +56,7 @@ const BenefitSection = () => {
             <div className="relative">
               {/* Glow effect */}
               <div className="absolute inset-0 bg-cepe-gold blur-3xl opacity-30 rounded-full scale-110" />
-              
+
               {/* Main badge */}
               <div className="relative bg-gradient-to-br from-cepe-gold to-cepe-gold-light rounded-full w-64 h-64 md:w-80 md:h-80 flex flex-col items-center justify-center shadow-glow animate-pulse-soft">
                 <Percent className="w-12 h-12 text-cepe-blue-dark mb-2" />
@@ -69,7 +69,10 @@ const BenefitSection = () => {
               <div className="absolute -top-4 -right-4 w-12 h-12 bg-cepe-green rounded-full flex items-center justify-center shadow-lg animate-float">
                 <span className="text-xl">✓</span>
               </div>
-              <div className="absolute -bottom-4 -left-4 w-10 h-10 bg-primary-foreground rounded-full flex items-center justify-center shadow-lg animate-float" style={{ animationDelay: "1s" }}>
+              <div
+                className="absolute -bottom-4 -left-4 w-10 h-10 bg-primary-foreground rounded-full flex items-center justify-center shadow-lg animate-float"
+                style={{ animationDelay: "1s" }}
+              >
                 <span className="text-lg">🎓</span>
               </div>
             </div>

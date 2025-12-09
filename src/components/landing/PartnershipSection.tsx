@@ -10,7 +10,7 @@ const PartnershipSection = () => {
             Parceria Exclusiva
           </div>
           <h2 className="heading-lg text-foreground mb-4">
-            AMAGIS e CEPE Idiomas: Uma Conexão para o Seu Crescimento Global
+            AMAGIS e CEPE Idiomas: Uma conexão para o seu Crescimento Global
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
             A AMAGIS está sempre buscando os melhores benefícios para os membros da sua comunidade. Por isso, firmamos
