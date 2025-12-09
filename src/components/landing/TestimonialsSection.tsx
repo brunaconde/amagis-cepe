@@ -1,4 +1,4 @@
-import { Play, Quote, Star } from "lucide-react";
+import { Quote, Star } from "lucide-react";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -34,25 +34,17 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Video placeholder */}
+        {/* Vídeo do Canva - Depoimentos */}
         <div className="max-w-3xl mx-auto mb-16">
-          <div className="aspect-video bg-gradient-to-br from-cepe-blue-dark to-cepe-blue rounded-2xl overflow-hidden shadow-card relative group cursor-pointer">
-            <img
-              src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&q=80"
-              alt="Vídeo de depoimentos - Alexandre e Henrique"
-              className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity"
+          <div className="relative w-full rounded-2xl overflow-hidden shadow-card" style={{ paddingTop: '56.25%' }}>
+            <iframe 
+              loading="lazy" 
+              className="absolute inset-0 w-full h-full border-none"
+              src="https://www.canva.com/design/DAG55h4Zgn4/51Dn5RXIph1oez5lk1dTAQ/view?embed" 
+              allowFullScreen
+              allow="fullscreen"
+              title="Vídeo de depoimentos - Alexandre e Henrique"
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-20 h-20 bg-cepe-gold rounded-full flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform">
-                <Play className="w-8 h-8 text-foreground ml-1" />
-              </div>
-            </div>
-            <div className="absolute bottom-6 left-6 right-6 text-primary-foreground">
-              <h3 className="text-xl font-semibold mb-1">Assista aos Depoimentos</h3>
-              <p className="text-sm text-primary-foreground/80">
-                Ouça diretamente de quem já viveu essa experiência transformadora em Córdoba
-              </p>
-            </div>
           </div>
         </div>
 
