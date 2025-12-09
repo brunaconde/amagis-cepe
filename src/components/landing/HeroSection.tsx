@@ -31,13 +31,13 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-primary-foreground/90 max-w-xl">
-              Aprenda espanhol na Argentina com uma experiência imersiva única. 
-              Desconto exclusivo para membros e familiares da AMAGIS.
+              Uma parceria que abre as portas do mundo para associados, dependentes e colaboradores AMAGIS. 
+              Viva uma imersão cultural e linguística inesquecível na vibrante Argentina!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button variant="hero" size="xl" onClick={scrollToForm}>
-                Quero Meu Desconto!
+                Quero Meu Desconto Exclusivo!
                 <ChevronDown className="w-5 h-5 animate-bounce" />
               </Button>
               <Button variant="ctaOutline" size="xl" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
@@ -53,7 +53,7 @@ const HeroSection = () => {
               </div>
               <div className="w-px h-12 bg-primary-foreground/20" />
               <div className="text-center">
-                <p className="text-3xl font-bold text-cepe-gold">3</p>
+                <p className="text-3xl font-bold text-cepe-gold">2-4</p>
                 <p className="text-sm text-primary-foreground/70">Semanas</p>
               </div>
               <div className="w-px h-12 bg-primary-foreground/20" />
@@ -69,7 +69,7 @@ const HeroSection = () => {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-card">
               <img
                 src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80"
-                alt="Estudantes em intercâmbio - placeholder"
+                alt="Estudantes em intercâmbio - aluno vestindo camisa do CEPE em Córdoba"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-cepe-blue-dark/60 to-transparent" />
@@ -82,7 +82,7 @@ const HeroSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Córdoba, Argentina</p>
-                    <p className="text-sm text-muted-foreground">Experiência imersiva de 3 semanas</p>
+                    <p className="text-sm text-muted-foreground">Imersão cultural e linguística</p>
                   </div>
                 </div>
               </div>

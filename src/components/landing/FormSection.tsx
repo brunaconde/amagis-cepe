@@ -75,7 +75,7 @@ const FormSection = () => {
           {/* Content */}
           <div className="text-primary-foreground">
             <h2 className="heading-lg mb-4">
-              Formulário de Interesse
+              Pronto para Seu Intercâmbio? Preencha Seus Dados e Garanta Seu Desconto!
             </h2>
             <p className="text-lg text-primary-foreground/90 mb-8">
               Preencha o formulário abaixo e nossa equipe entrará em contato para apresentar todas as opções de programa e garantir seu desconto exclusivo de 15%.
@@ -135,7 +135,7 @@ const FormSection = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="telefone" className="text-foreground">Telefone/WhatsApp *</Label>
+                  <Label htmlFor="telefone" className="text-foreground">Telefone (com DDD) *</Label>
                   <Input
                     id="telefone"
                     type="tel"
@@ -159,11 +159,9 @@ const FormSection = () => {
                     <SelectValue placeholder="Selecione sua relação" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="magistrado">Magistrado(a) Associado(a)</SelectItem>
-                    <SelectItem value="conjuge">Cônjuge de Associado(a)</SelectItem>
-                    <SelectItem value="filho">Filho(a) de Associado(a)</SelectItem>
-                    <SelectItem value="outro-familiar">Outro Familiar</SelectItem>
-                    <SelectItem value="nao-associado">Não sou associado/familiar</SelectItem>
+                    <SelectItem value="associado">Associado</SelectItem>
+                    <SelectItem value="dependente">Dependente</SelectItem>
+                    <SelectItem value="colaborador">Colaborador</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -182,9 +180,7 @@ const FormSection = () => {
                     <SelectContent>
                       <SelectItem value="espanhol">Espanhol</SelectItem>
                       <SelectItem value="ingles">Inglês</SelectItem>
-                      <SelectItem value="frances">Francês</SelectItem>
-                      <SelectItem value="italiano">Italiano</SelectItem>
-                      <SelectItem value="outro">Outro</SelectItem>
+                      <SelectItem value="portugues">Português</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -199,11 +195,9 @@ const FormSection = () => {
                       <SelectValue placeholder="Selecione a duração" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="1-semana">1 Semana</SelectItem>
                       <SelectItem value="2-semanas">2 Semanas</SelectItem>
                       <SelectItem value="3-semanas">3 Semanas</SelectItem>
-                      <SelectItem value="4-semanas">4 Semanas ou mais</SelectItem>
-                      <SelectItem value="indefinido">Ainda não sei</SelectItem>
+                      <SelectItem value="4-semanas">4 Semanas</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -229,7 +223,7 @@ const FormSection = () => {
                   className="mt-0.5"
                 />
                 <Label htmlFor="privacidade" className="text-sm text-muted-foreground font-normal leading-snug cursor-pointer">
-                  Li e concordo com a <a href="#" className="text-primary hover:underline">Política de Privacidade</a> e autorizo o contato para informações sobre os programas.
+                  Concordo com a <a href="#" className="text-primary hover:underline">Política de Privacidade</a> e em receber contatos do CEPE Idiomas.
                 </Label>
               </div>
 

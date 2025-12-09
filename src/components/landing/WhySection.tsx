@@ -1,4 +1,4 @@
-import { MapPin, GraduationCap, Users, Building, BookOpen, Globe } from "lucide-react";
+import { MapPin, GraduationCap, Users, Building, BookOpen, Globe, Coffee, Shield } from "lucide-react";
 
 const WhySection = () => {
   return (
@@ -20,33 +20,38 @@ const WhySection = () => {
               <div className="w-12 h-12 bg-cepe-blue rounded-full flex items-center justify-center">
                 <MapPin className="w-6 h-6 text-primary-foreground" />
               </div>
-              <h3 className="heading-md text-foreground">Por Que Córdoba?</h3>
+              <h3 className="heading-md text-foreground">Por Que Córdoba é o Destino Perfeito?</h3>
             </div>
 
             <div className="aspect-video rounded-2xl overflow-hidden shadow-card mb-6">
               <img
                 src="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=800&q=80"
-                alt="Córdoba, Argentina - placeholder"
+                alt="Córdoba, Argentina - La Docta"
                 className="w-full h-full object-cover"
               />
             </div>
+
+            <p className="text-muted-foreground mb-4">
+              Conhecida como <strong className="text-foreground">"La Docta"</strong> pela sua efervescência universitária e cultural, 
+              Córdoba é um caldeirão cultural no coração da Argentina.
+            </p>
 
             <div className="space-y-4">
               {[
                 {
                   icon: Building,
-                  title: "Centro Cultural e Universitário",
-                  description: "Segunda maior cidade da Argentina, com rica vida cultural e ambiente acadêmico vibrante."
+                  title: "Efervescência Universitária",
+                  description: "Ruas históricas, bares charmosos, parques vibrantes e uma atmosfera acadêmica única."
                 },
                 {
                   icon: Users,
-                  title: "Ambiente Acolhedor",
-                  description: "Cidade segura e receptiva, ideal para estudantes internacionais vivenciarem a cultura argentina."
+                  title: "População Acolhedora",
+                  description: "Cidade ideal para quem busca uma imersão autêntica e segura, perfeita para aprender e se divertir."
                 },
                 {
-                  icon: Globe,
-                  title: "Imersão Total",
-                  description: "Pratique espanhol o dia todo em situações reais, acelerando seu aprendizado naturalmente."
+                  icon: Coffee,
+                  title: "Cultura Rica",
+                  description: "Cafés, música, arte e tradições argentinas que tornam cada momento uma experiência inesquecível."
                 }
               ].map((item, index) => (
                 <div key={index} className="flex gap-4 p-4 bg-card rounded-xl border border-border hover:shadow-soft transition-shadow">
@@ -68,33 +73,38 @@ const WhySection = () => {
               <div className="w-12 h-12 bg-cepe-gold rounded-full flex items-center justify-center">
                 <GraduationCap className="w-6 h-6 text-foreground" />
               </div>
-              <h3 className="heading-md text-foreground">Por Que CEPE Idiomas?</h3>
+              <h3 className="heading-md text-foreground">CEPE Idiomas: Excelência no Ensino</h3>
             </div>
 
             <div className="aspect-video rounded-2xl overflow-hidden shadow-card mb-6">
               <img
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80"
-                alt="Aulas no CEPE Idiomas - placeholder"
+                alt="Aulas no CEPE Idiomas - Salas de aula modernas"
                 className="w-full h-full object-cover"
               />
             </div>
+
+            <p className="text-muted-foreground mb-4">
+              Nossa escola, localizada no coração de Córdoba, oferece <strong className="text-foreground">metodologia dinâmica</strong> e 
+              professores dedicados que transformam o aprendizado em uma experiência leve e eficaz.
+            </p>
 
             <div className="space-y-4">
               {[
                 {
                   icon: BookOpen,
-                  title: "Metodologia Comprovada",
-                  description: "Mais de 20 anos de experiência em ensino de idiomas com metodologia própria e eficaz."
+                  title: "Metodologia Dinâmica",
+                  description: "Ambiente perfeito para desenvolver suas habilidades enquanto desfruta da cultura argentina."
                 },
                 {
-                  icon: Users,
-                  title: "Turmas Reduzidas",
-                  description: "Grupos pequenos para atenção personalizada e maior interação entre alunos e professores."
+                  icon: Globe,
+                  title: "Amigos do Mundo Todo",
+                  description: "Faça conexões internacionais e pratique o idioma com estudantes de diversos países."
                 },
                 {
-                  icon: GraduationCap,
-                  title: "Professores Nativos",
-                  description: "Corpo docente qualificado e nativo, garantindo pronúncia e expressões autênticas."
+                  icon: Shield,
+                  title: "Três Idiomas Disponíveis",
+                  description: "Escolha entre Espanhol, Inglês ou Português com professores altamente qualificados."
                 }
               ].map((item, index) => (
                 <div key={index} className="flex gap-4 p-4 bg-card rounded-xl border border-border hover:shadow-soft transition-shadow">
