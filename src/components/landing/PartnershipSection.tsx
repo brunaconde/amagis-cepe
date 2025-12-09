@@ -10,10 +10,11 @@ const PartnershipSection = () => {
             Parceria Exclusiva
           </div>
           <h2 className="heading-lg text-foreground mb-4">
-            A Parceria que Abre Fronteiras
+            AMAGIS e CEPE Idiomas: Uma Conexão para o Seu Crescimento Global
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            Uma colaboração especial entre a Associação dos Magistrados Mineiros (AMAGIS) e o CEPE Idiomas para oferecer aos associados e seus familiares uma oportunidade única de aprendizado de idiomas.
+            A AMAGIS está sempre buscando os melhores benefícios para os membros da sua comunidade. 
+            Por isso, firmamos esta parceria especial com o CEPE Idiomas, uma das mais conceituadas escolas de intercâmbio em Córdoba, Argentina.
           </p>
         </div>
 
@@ -22,7 +23,10 @@ const PartnershipSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
             <div className="bg-card rounded-2xl p-8 shadow-card hover:shadow-lg transition-shadow">
               <div className="w-40 h-24 bg-muted rounded-lg flex items-center justify-center">
-                <span className="text-muted-foreground font-medium">Logo AMAGIS</span>
+                <div className="text-center">
+                  <span className="text-muted-foreground font-medium block">Logo AMAGIS</span>
+                  <span className="text-xs text-muted-foreground">1955 • 2025</span>
+                </div>
               </div>
             </div>
             
@@ -43,10 +47,12 @@ const PartnershipSection = () => {
           <div className="space-y-6">
             <div className="bg-gradient-to-br from-cepe-blue/5 to-cepe-gold/5 rounded-2xl p-6 border border-border">
               <p className="text-foreground leading-relaxed">
-                A AMAGIS, pensando no desenvolvimento pessoal e profissional de seus associados, firmou uma parceria estratégica com o CEPE Idiomas, instituição referência em ensino de idiomas e programas de intercâmbio. 
+                Esta é a sua chance de aprimorar um novo idioma, mergulhar em uma cultura rica e colecionar memórias inesquecíveis, 
+                com a qualidade e a confiança que você merece.
               </p>
               <p className="text-foreground leading-relaxed mt-4">
-                Esta parceria visa proporcionar experiências educacionais de alta qualidade com condições especiais e exclusivas para toda a comunidade AMAGIS.
+                Escolha entre <strong>Espanhol, Inglês ou Português</strong> e aproveite programas de <strong>2, 3 ou 4 semanas</strong> 
+                com o melhor suporte e experiência de aprendizado.
               </p>
             </div>
 
@@ -58,7 +64,7 @@ const PartnershipSection = () => {
               <div>
                 <h4 className="font-bold text-foreground">Parceria Exclusiva</h4>
                 <p className="text-sm text-muted-foreground">
-                  Benefícios únicos para membros e familiares da AMAGIS
+                  Acesso a um benefício que ninguém mais tem
                 </p>
               </div>
             </div>

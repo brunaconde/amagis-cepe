@@ -9,44 +9,44 @@ import { HelpCircle } from "lucide-react";
 const FAQSection = () => {
   const faqs = [
     {
-      question: "Quem pode aproveitar o desconto de 15%?",
-      answer: "O desconto é válido para todos os magistrados associados à AMAGIS e seus familiares diretos (cônjuges e filhos). Basta informar sua condição no formulário de interesse."
+      question: "Quem pode utilizar o desconto de 15%?",
+      answer: "O desconto é exclusivo para associados, dependentes e colaboradores da AMAGIS. Sua relação com a AMAGIS será verificada pela nossa equipe."
     },
     {
-      question: "O desconto pode ser combinado com outras promoções?",
-      answer: "O desconto de 15% da parceria AMAGIS é exclusivo e não cumulativo com outras promoções ou descontos do CEPE Idiomas. Porém, é garantido ser aplicado em qualquer programa disponível."
+      question: "O desconto é válido para qualquer programa?",
+      answer: "Sim, os 15% de desconto são válidos sobre o valor tabelado de todos os programas de intercâmbio do CEPE Idiomas, seja qual for a duração (2, 3 ou 4 semanas) e o idioma escolhido (Espanhol, Inglês ou Português)."
     },
     {
-      question: "Quais programas estão incluídos no desconto?",
-      answer: "O desconto se aplica a todos os programas de intercâmbio do CEPE Idiomas para Córdoba, Argentina, incluindo cursos de diferentes durações e intensidades."
+      question: "Quais idiomas e durações estão disponíveis?",
+      answer: "Oferecemos cursos de Espanhol, Inglês e Português, com durações de 2, 3 ou 4 semanas. Cada programa pode ser personalizado de acordo com suas necessidades e objetivos."
     },
     {
-      question: "Como funciona a acomodação durante o intercâmbio?",
-      answer: "Oferecemos diversas opções de acomodação, incluindo casas de família, apartamentos compartilhados e residências estudantis. Cada opção é selecionada criteriosamente para garantir conforto e segurança."
+      question: "Como o desconto é aplicado?",
+      answer: "Após o preenchimento do formulário, nossa equipe entrará em contato para verificar sua elegibilidade e aplicar o desconto de 15% automaticamente sobre o valor tabelado do programa escolhido."
     },
     {
-      question: "Preciso ter conhecimento prévio de espanhol?",
-      answer: "Não! Aceitamos alunos de todos os níveis, desde iniciantes até avançados. Realizamos um teste de nivelamento na chegada para alocá-lo na turma mais adequada ao seu perfil."
+      question: "O que está incluso no programa de intercâmbio?",
+      answer: "Nossos programas incluem aulas intensivas de idiomas e diversas atividades culturais complementares. Acomodação, passagens aéreas e seguro-viagem não estão inclusos, mas podem ser cotados separadamente."
     },
     {
-      question: "O que está incluído no pacote de intercâmbio?",
-      answer: "Geralmente inclui: curso de espanhol, material didático, acomodação, atividades culturais programadas, certificado de conclusão e suporte da equipe local. Os detalhes específicos variam conforme o programa escolhido."
+      question: "Preciso de visto para a Argentina?",
+      answer: "Para cidadãos brasileiros, não é necessário visto para programas de intercâmbio de curta duração na Argentina. Apenas seu RG (com até 10 anos de emissão e boa foto) ou passaporte válido são documentos suficientes para entrada."
     },
     {
-      question: "Qual é o período mínimo de intercâmbio?",
-      answer: "O período mínimo é de 1 semana, mas recomendamos pelo menos 2 a 3 semanas para uma experiência mais completa e resultados mais expressivos no aprendizado."
+      question: "Posso levar minha família?",
+      answer: "Sim! O desconto é extensivo a dependentes da AMAGIS. Converse com nossa equipe para planejar a melhor experiência de intercâmbio para toda a família."
     },
     {
-      question: "Como faço para me inscrever?",
-      answer: "Basta preencher o formulário de interesse nesta página. Nossa equipe entrará em contato em até 48 horas para apresentar as opções de programa e guiá-lo no processo de inscrição."
+      question: "Como faço o teste de nivelamento?",
+      answer: "Basta clicar no botão \"Fazer Teste Gratuito de Espanhol!\" e responder às questões. O resultado será enviado por e-mail e nos ajudará a personalizar seu curso no CEPE Idiomas."
     },
     {
-      question: "Posso cancelar ou alterar minha inscrição?",
-      answer: "Sim, temos uma política flexível de alteração e cancelamento. Os termos específicos serão apresentados no momento da inscrição formal. Recomendamos consultar nossa equipe para mais detalhes."
+      question: "Quais são os custos adicionais?",
+      answer: "Passagens aéreas, seguro-viagem, alimentação, passeios extras e acomodação são custos adicionais que podem ser cotados pela nossa equipe de acordo com suas preferências."
     },
     {
-      question: "Córdoba é uma cidade segura?",
-      answer: "Sim! Córdoba é considerada uma das cidades mais seguras da Argentina, com baixos índices de criminalidade na região central onde ocorrem as atividades do programa. Além disso, nossa equipe local oferece orientações de segurança."
+      question: "Como entro em contato para mais informações?",
+      answer: "Preencha o formulário nesta página! A equipe do CEPE Idiomas entrará em contato para tirar todas as suas dúvidas e ajudar você a planejar seu intercâmbio com o desconto exclusivo AMAGIS."
     }
   ];
 

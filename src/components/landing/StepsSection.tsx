@@ -1,4 +1,4 @@
-import { ClipboardCheck, MessageSquare, FileCheck, Plane } from "lucide-react";
+import { ClipboardCheck, MessageSquare, FileCheck, Percent } from "lucide-react";
 
 const StepsSection = () => {
   const steps = [
@@ -6,25 +6,25 @@ const StepsSection = () => {
       number: 1,
       icon: ClipboardCheck,
       title: "Preencha o Formulário",
-      description: "Complete o formulário de interesse nesta página com seus dados e preferências de programa."
+      description: "Insira seus dados no formulário abaixo para validar sua elegibilidade como membro da comunidade AMAGIS."
     },
     {
       number: 2,
       icon: MessageSquare,
-      title: "Receba o Contato",
-      description: "Nossa equipe entrará em contato em até 48 horas para entender suas necessidades e apresentar as opções."
+      title: "Receba Nosso Contato",
+      description: "Nossa equipe entrará em contato em breve para entender seus objetivos e apresentar os programas ideais."
     },
     {
       number: 3,
       icon: FileCheck,
-      title: "Confirme Sua Inscrição",
-      description: "Escolha seu programa, confirme sua inscrição e receba automaticamente o desconto de 15%."
+      title: "Escolha Seu Programa",
+      description: "Selecione o curso e a duração que mais se adequam a você: 2, 3 ou 4 semanas de imersão."
     },
     {
       number: 4,
-      icon: Plane,
-      title: "Embarque para Córdoba",
-      description: "Prepare-se para uma experiência transformadora de aprendizado e cultura na Argentina!"
+      icon: Percent,
+      title: "Desconto Aplicado",
+      description: "Seu desconto exclusivo de 15% será automaticamente aplicado sobre o valor tabelado!"
     }
   ];
 
@@ -33,7 +33,7 @@ const StepsSection = () => {
       <div className="section-container">
         <div className="text-center mb-12">
           <h2 className="heading-lg text-foreground mb-4">
-            Como Aproveitar Seu Desconto
+            É Simples Garantir Seu Benefício!
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Em apenas 4 passos simples, você garante seu desconto exclusivo e inicia sua jornada de aprendizado.

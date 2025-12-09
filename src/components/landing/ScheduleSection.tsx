@@ -3,36 +3,42 @@ import { Calendar, AlertCircle } from "lucide-react";
 const ScheduleSection = () => {
   const weeks = [
     {
-      week: "Semana 1",
-      title: "Chegada e Adaptação",
+      week: "1ª Semana",
+      title: "Chegada e Imersão",
       activities: [
-        "Recepção no aeroporto e transfer",
-        "Instalação na acomodação",
-        "Tour pela cidade de Córdoba",
-        "Teste de nivelamento",
-        "Início das aulas de espanhol"
+        "Domingo: Chegada em Córdoba e ida ao alojamento",
+        "Segunda: Credenciamento, aula de pronúncia e almoço de boas-vindas",
+        "Terça: Curso 9h-13h + Classe de Tango",
+        "Quarta: Curso + Visita aos museus (Palacio Ferreyra, Caraffa)",
+        "Quinta: Curso + Passeio Nueva Córdoba e Paseo del Buen Pastor",
+        "Sexta: Curso + Degustação de vinhos e queijos em Colonia Caroya",
+        "Sábado: Dia livre - passeios opcionais"
       ]
     },
     {
-      week: "Semana 2",
-      title: "Imersão Cultural",
+      week: "2ª Semana",
+      title: "Cultura e Aventura",
       activities: [
-        "Aulas intensivas de espanhol",
-        "Visita a pontos históricos",
-        "Atividades culturais em grupo",
-        "Prática com nativos",
-        "Excursão regional"
+        "Segunda: Curso 9h-13h + Picnic no Parque Sarmiento",
+        "Terça: Curso + Aula de Salsa e Bachata",
+        "Quarta: Curso + Museu Genaro Pérez e Museu do Cuarteto",
+        "Quinta: Passeio Alta Gracia + Museu Casa do Che Guevara",
+        "Sexta: Curso + Visita ao Plaza Cielo y Tierra",
+        "Sábado: Dia livre - passeios opcionais",
+        "Entrega de certificados para alunos de 2 semanas"
       ]
     },
     {
-      week: "Semana 3",
-      title: "Consolidação e Encerramento",
+      week: "3ª Semana",
+      title: "Consolidação",
       activities: [
-        "Aprofundamento linguístico",
-        "Projeto final de conversação",
-        "Avaliação de progresso",
-        "Cerimônia de certificação",
-        "Transfer de retorno"
+        "Segunda: Curso + Academia de Ciências e Centro Cultural",
+        "Terça: Tarde livre para compras",
+        "Quarta: Curso + Museo Marqués de Sobremonte",
+        "Quinta: Revisão e Exame escrito",
+        "Sexta: Exame oral e entrega de certificados",
+        "Sábado: Saída do alojamento - Aeroporto",
+        "Mundolingo: encontros com pessoas do mundo todo"
       ]
     }
   ];
@@ -43,13 +49,14 @@ const ScheduleSection = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-cepe-green/10 text-cepe-green rounded-full px-4 py-2 text-sm font-medium mb-4">
             <Calendar className="w-4 h-4" />
-            Programação
+            Programa de Intercâmbio
           </div>
           <h2 className="heading-lg text-foreground mb-4">
-            Cronograma de 3 Semanas
+            Viva a Experiência: Seu Intercâmbio de 3 Semanas!
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Veja como será sua experiência ao longo das três semanas de intercâmbio.
+            Prepare-se para dias de muito aprendizado e aventura! Este é um exemplo de como seria seu programa de intercâmbio, 
+            mesclando aulas interativas com o melhor da cultura e lazer de Córdoba.
           </p>
         </div>
 
@@ -85,9 +92,10 @@ const ScheduleSection = () => {
         <div className="bg-cepe-gold/10 border border-cepe-gold/30 rounded-xl p-4 flex items-start gap-4">
           <AlertCircle className="w-6 h-6 text-cepe-gold flex-shrink-0 mt-0.5" />
           <div>
-            <p className="text-foreground font-medium">Cronograma Ilustrativo</p>
+            <p className="text-foreground font-medium">Programação Sujeita a Alterações</p>
             <p className="text-sm text-muted-foreground">
-              Este é um cronograma ilustrativo. A programação real pode variar de acordo com o programa escolhido, período do ano e condições locais.
+              Este é um cronograma ilustrativo. A programação real pode variar decorrente de condições climáticas, feriados ou logística. 
+              Consulte a equipe do CEPE Idiomas para detalhes sobre seu programa.
             </p>
           </div>
         </div>

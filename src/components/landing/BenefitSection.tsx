@@ -24,19 +24,20 @@ const BenefitSection = () => {
             </div>
 
             <h2 className="heading-lg">
-              Seu Benefício Imperdível
+              15% de Desconto EXCLUSIVO: Realize o Seu Sonho e de Sua Família!
             </h2>
 
             <p className="text-lg text-primary-foreground/90">
-              Como membro ou familiar de associado da AMAGIS, você tem acesso a um desconto especial de <strong className="text-cepe-gold">15% em todos os programas de intercâmbio</strong> do CEPE Idiomas para Córdoba, Argentina.
+              Como membro da comunidade AMAGIS, você garante um benefício único: <strong className="text-cepe-gold">15% de desconto</strong> sobre o valor tabelado em qualquer programa de intercâmbio do CEPE Idiomas! 
+              Seja para aprender ou aprimorar o espanhol, inglês ou português, este benefício é a sua porta de entrada para uma aventura enriquecedora, com uma economia significativa.
             </p>
 
             <ul className="space-y-4">
               {[
-                "Desconto válido para cursos de espanhol de todas as durações",
-                "Extensivo a familiares diretos dos associados",
-                "Sem taxas adicionais ou custos ocultos",
-                "Inclui suporte completo antes, durante e após o programa"
+                "Válido para qualquer duração: 2, 3 ou 4 semanas",
+                "Válido para qualquer idioma: Espanhol, Inglês ou Português",
+                "Extensivo a dependentes e colaboradores AMAGIS",
+                "Desconto exclusivo sobre o valor tabelado"
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <Star className="w-5 h-5 text-cepe-gold flex-shrink-0 mt-0.5" />
@@ -46,7 +47,7 @@ const BenefitSection = () => {
             </ul>
 
             <Button variant="hero" size="xl" onClick={scrollToForm}>
-              Garantir Meu Desconto
+              Veja os Programas e Garanta Seu Desconto!
             </Button>
           </div>
 
@@ -61,7 +62,7 @@ const BenefitSection = () => {
                 <Percent className="w-12 h-12 text-cepe-blue-dark mb-2" />
                 <span className="text-6xl md:text-8xl font-extrabold text-cepe-blue-dark">15</span>
                 <span className="text-2xl md:text-3xl font-bold text-cepe-blue-dark">% OFF</span>
-                <span className="text-sm font-medium text-cepe-blue-dark/80 mt-2">Desconto Exclusivo</span>
+                <span className="text-sm font-medium text-cepe-blue-dark/80 mt-2">Desconto Exclusivo AMAGIS</span>
               </div>
 
               {/* Floating elements */}

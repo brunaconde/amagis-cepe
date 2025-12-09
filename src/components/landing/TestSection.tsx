@@ -18,11 +18,13 @@ const TestSection = () => {
           </div>
 
           <h2 className="heading-lg mb-6">
-            Teste Seu Espanhol Agora!
+            Curioso(a) para Saber Seu Nível de Espanhol?
           </h2>
 
           <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Quer descobrir seu nível atual de espanhol? Faça nosso teste gratuito e receba uma avaliação personalizada. É rápido, fácil e sem compromisso!
+            Antes de embarcar para sua aventura em Córdoba, que tal descobrir seu nível de espanhol? 
+            Faça nosso teste online rápido e gratuito. Em poucos minutos, você terá uma estimativa do seu conhecimento 
+            e um primeiro passo para planejar seu intercâmbio com o CEPE Idiomas.
           </p>
 
           <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
@@ -49,7 +51,7 @@ const TestSection = () => {
             className="group"
           >
             <a href="https://cepeidiomas.com.br/teste-de-espanhol" target="_blank" rel="noopener noreferrer">
-              Fazer o Teste Agora
+              Fazer Teste Gratuito de Espanhol!
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>

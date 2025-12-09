@@ -3,21 +3,21 @@ import { Play, Quote, Star } from "lucide-react";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Maria Silva",
-      role: "Magistrada - TJMG",
-      quote: "A experiência em Córdoba superou todas as expectativas. Em apenas 3 semanas, meu espanhol evoluiu mais do que em anos de estudo tradicional. O CEPE Idiomas oferece um suporte excepcional.",
+      name: "Alexandre",
+      role: "Representante CEPE junto à AMAGIS",
+      quote: "A experiência em Córdoba foi transformadora. A imersão cultural aliada ao método de ensino do CEPE proporciona um aprendizado único e eficaz. Recomendo a todos os associados da AMAGIS!",
       rating: 5
     },
     {
-      name: "João Santos",
-      role: "Familiar de Associado",
-      quote: "Como filho de associado da AMAGIS, aproveitei o desconto exclusivo e foi uma das melhores decisões. A imersão cultural é incrível e os professores são muito dedicados.",
+      name: "Henrique",
+      role: "Representante CEPE junto à AMAGIS",
+      quote: "O programa do CEPE Idiomas vai muito além das aulas. É uma verdadeira imersão na cultura argentina, com atividades culturais incríveis e a chance de fazer amigos do mundo todo.",
       rating: 5
     },
     {
-      name: "Ana Oliveira",
-      role: "Desembargadora",
-      quote: "Recomendo fortemente para todos os colegas. A combinação de aprendizado de qualidade com uma experiência cultural enriquecedora é simplesmente perfeita.",
+      name: "Associado AMAGIS",
+      role: "Magistrado",
+      quote: "Aproveitei o desconto exclusivo da parceria AMAGIS e foi uma das melhores decisões. Em apenas 3 semanas, meu espanhol evoluiu mais do que em anos de estudo tradicional.",
       rating: 5
     }
   ];
@@ -27,7 +27,7 @@ const TestimonialsSection = () => {
       <div className="section-container">
         <div className="text-center mb-12">
           <h2 className="heading-lg text-foreground mb-4">
-            Experiências Reais
+            Transforme Sua Vida: Quem Já Foi, Recomenda!
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Veja o que nossos alunos têm a dizer sobre sua experiência com o CEPE Idiomas.
@@ -39,7 +39,7 @@ const TestimonialsSection = () => {
           <div className="aspect-video bg-gradient-to-br from-cepe-blue-dark to-cepe-blue rounded-2xl overflow-hidden shadow-card relative group cursor-pointer">
             <img
               src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&q=80"
-              alt="Vídeo de depoimentos - placeholder"
+              alt="Vídeo de depoimentos - Alexandre e Henrique"
               className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity"
             />
             <div className="absolute inset-0 flex items-center justify-center">
@@ -50,7 +50,7 @@ const TestimonialsSection = () => {
             <div className="absolute bottom-6 left-6 right-6 text-primary-foreground">
               <h3 className="text-xl font-semibold mb-1">Assista aos Depoimentos</h3>
               <p className="text-sm text-primary-foreground/80">
-                Ouça diretamente de quem já viveu essa experiência transformadora
+                Ouça diretamente de quem já viveu essa experiência transformadora em Córdoba
               </p>
             </div>
           </div>
