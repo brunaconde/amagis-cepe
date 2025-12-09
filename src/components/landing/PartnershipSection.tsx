@@ -1,8 +1,6 @@
 import { Handshake, Award } from "lucide-react";
-
 const PartnershipSection = () => {
-  return (
-    <section className="section-padding bg-background" id="parceria">
+  return <section className="section-padding bg-background" id="parceria">
       <div className="section-container">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-cepe-gold/10 text-cepe-gold rounded-full px-4 py-2 text-sm font-medium mb-4">
@@ -58,8 +56,8 @@ const PartnershipSection = () => {
             </div>
 
             {/* Selo de parceria */}
-            <div className="flex items-center gap-4 bg-cepe-gold/10 rounded-xl p-4 border border-cepe-gold/30">
-              <div className="w-16 h-16 bg-cepe-gold rounded-full flex items-center justify-center flex-shrink-0">
+            <div className="flex items-center gap-4 rounded-xl p-4 border bg-[#cea500]/10 border-amber-400">
+              <div className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 bg-yellow-500">
                 <Award className="w-8 h-8 text-foreground" />
               </div>
               <div>
@@ -70,8 +68,6 @@ const PartnershipSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default PartnershipSection;
