@@ -29,7 +29,11 @@ const TestSection = () => {
           </p>
 
           <Button asChild variant="hero" size="xl" className="group">
-            <a href="https://cepeidiomas.com.br/teste-de-espanhol" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeawCT1cCEPHETCf00h1rbYQ4b9XjnuwN1-bGJmgNkrNzHNug/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Fazer Teste Gratuito de Espanhol!
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
