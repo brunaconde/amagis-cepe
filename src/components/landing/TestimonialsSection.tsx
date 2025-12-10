@@ -3,21 +3,9 @@ import { Quote, Star } from "lucide-react";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Alexandre",
-      role: "Representante CEPE junto à AMAGIS",
-      quote: "A experiência em Córdoba foi transformadora. A imersão cultural aliada ao método de ensino do CEPE proporciona um aprendizado único e eficaz. Recomendo a todos os associados da AMAGIS!",
-      rating: 5
-    },
-    {
       name: "Henrique",
       role: "Representante CEPE junto à AMAGIS",
-      quote: "O programa do CEPE Idiomas vai muito além das aulas. É uma verdadeira imersão na cultura argentina, com atividades culturais incríveis e a chance de fazer amigos do mundo todo.",
-      rating: 5
-    },
-    {
-      name: "Associado AMAGIS",
-      role: "Magistrado",
-      quote: "Aproveitei o desconto exclusivo da parceria AMAGIS e foi uma das melhores decisões. Em apenas 3 semanas, meu espanhol evoluiu mais do que em anos de estudo tradicional.",
+      quote: "Eu e meu irmão saímos de Belo Horizonte e fizemos uma viagem de carro de 4.000 km até Córdoba, na Argentina, onde ficamos três semanas mergulhados na cultura e no aprendizado na CEPE Idiomas. Além de estudar espanhol, vivi algo que vai muito além do idioma: entender de verdade as nuances, expressões e detalhes que fazem toda a diferença no dia a dia. Tem uma distância enorme entre \"achar que sabe\" espanhol e realmente falar e entender, sabe?\n\nA CEPE foi fundamental nisso. Eles não só ensinam o idioma, mas também nos conectam com a cultura de um jeito único. E vou te dizer: aprender espanhol foi uma das melhores escolhas que já fiz. Muita gente só pensa no inglês ou no francês, mas o espanhol abre portas gigantes no mundo – tanto na vida pessoal quanto na profissional.\n\nSe você está querendo dar um passo pra evoluir, explorar o mundo e abrir novas oportunidades, o espanhol da CEPE é o caminho certo. A vivência que eles proporcionam vai além das aulas e realmente amplia nossos horizontes.",
       rating: 5
     }
   ];
@@ -49,7 +37,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Testimonial cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="max-w-2xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
