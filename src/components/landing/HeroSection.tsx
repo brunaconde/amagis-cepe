@@ -93,9 +93,9 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Badge */}
-            <div className="absolute -top-4 -right-4 bg-cepe-gold text-foreground rounded-full px-4 py-2 shadow-glow animate-pulse-soft">
-              <span className="font-bold">-15% OFF</span>
+            {/* Badge - positioned inside on mobile, outside on larger screens */}
+            <div className="absolute -top-2 right-2 sm:-top-4 sm:-right-4 bg-cepe-gold text-foreground rounded-full px-3 py-1.5 sm:px-4 sm:py-2 shadow-glow animate-pulse-soft z-10">
+              <span className="font-bold text-sm sm:text-base">-15% OFF</span>
             </div>
           </div>
         </div>

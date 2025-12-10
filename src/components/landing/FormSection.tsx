@@ -133,7 +133,7 @@ const FormSection = () => {
           </div>
 
           {/* Form */}
-          <div className="bg-card rounded-2xl shadow-card p-6 md:p-8">
+          <div className="bg-card rounded-2xl shadow-card p-4 sm:p-6 md:p-8 overflow-hidden">
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
               {/* Nome Completo */}
               <div className="space-y-2">
@@ -232,9 +232,9 @@ const FormSection = () => {
                     id="privacidade"
                     checked={privacidade}
                     onCheckedChange={(checked) => setValue("privacidade", checked as boolean)}
-                    className={errors.privacidade ? "border-destructive" : ""}
+                    className={`flex-shrink-0 ${errors.privacidade ? "border-destructive" : ""}`}
                   />
-                  <Label htmlFor="privacidade" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+                  <Label htmlFor="privacidade" className="text-sm text-muted-foreground leading-relaxed cursor-pointer break-words">
                     Concordo com a política de privacidade e autorizo o contato por e-mail ou telefone.{" "}
                     <span className="text-destructive">*</span>
                   </Label>
