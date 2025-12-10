@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logoCepe from "@/assets/logo-cepe-idiomas.png";
+import logoCepeWhite from "@/assets/logo-cepe-white.png";
+import logoCepeColor from "@/assets/logo-cepe-color.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,9 +43,9 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src={logoCepe} 
+              src={isScrolled ? logoCepeColor : logoCepeWhite} 
               alt="CEPE Idiomas" 
-              className="h-10 w-auto"
+              className="h-10 w-auto transition-all duration-300"
             />
           </div>
 
