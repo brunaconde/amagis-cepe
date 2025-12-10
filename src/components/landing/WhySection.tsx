@@ -1,5 +1,6 @@
 import { MapPin, GraduationCap, Users, Building, BookOpen, Globe, Coffee, Shield } from "lucide-react";
 import cordobaPlaza from "@/assets/cordoba-plaza.webp";
+import cepeClassroom from "@/assets/cepe-classroom.jpg";
 
 const WhySection = () => {
   return (
@@ -82,8 +83,8 @@ const WhySection = () => {
 
             <div className="aspect-video rounded-2xl overflow-hidden shadow-card mb-6">
               <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80"
-                alt="Aulas no CEPE Idiomas - Salas de aula modernas"
+                src={cepeClassroom}
+                alt="Sala de aula do CEPE Idiomas com estudantes"
                 className="w-full h-full object-cover"
               />
             </div>
