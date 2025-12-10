@@ -46,7 +46,7 @@ const BenefitSection = () => {
             </ul>
 
             <Button variant="hero" size="xl" onClick={scrollToForm}>
-              Veja os Programas e Garanta Seu Desconto!
+              Garanta Seu Desconto!
             </Button>
           </div>
 
