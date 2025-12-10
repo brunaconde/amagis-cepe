@@ -36,7 +36,7 @@ const BenefitSection = () => {
               {[
                 "Válido para qualquer duração: 2, 3 ou 4 semanas",
                 "Extensivo a dependentes e colaboradores AMAGIS",
-                "Desconto exclusivo sobre o valor tabelado",
+                "Desconto aplicado sobre o valor tabelado",
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <Star className="w-5 h-5 text-cepe-gold flex-shrink-0 mt-0.5" />
@@ -46,7 +46,7 @@ const BenefitSection = () => {
             </ul>
 
             <Button variant="hero" size="xl" onClick={scrollToForm}>
-              Garanta Seu Desconto!
+              Clique aqui e garanta seu desconto!
             </Button>
           </div>
 
@@ -60,7 +60,7 @@ const BenefitSection = () => {
               <div className="relative bg-gradient-to-br from-cepe-gold to-cepe-gold-light rounded-full w-64 h-64 md:w-80 md:h-80 flex flex-col items-center justify-center shadow-glow animate-pulse-soft">
                 <span className="text-6xl md:text-8xl font-extrabold text-cepe-blue-dark">15</span>
                 <span className="text-2xl md:text-3xl font-bold text-cepe-blue-dark">% OFF</span>
-                <span className="text-sm font-medium text-cepe-blue-dark/80 mt-2">Desconto Exclusivo AMAGIS</span>
+                <span className="text-sm font-medium text-cepe-blue-dark/80 mt-2">Desconto AMAGIS</span>
               </div>
 
               {/* Floating elements */}
