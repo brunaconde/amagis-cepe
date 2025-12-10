@@ -1,4 +1,7 @@
 import { Handshake, Award } from "lucide-react";
+import logoAmagis from "@/assets/logo-amagis.png";
+import logoCepe from "@/assets/logo-cepe-idiomas.png";
+
 const PartnershipSection = () => {
   return <section className="section-padding bg-background" id="parceria">
       <div className="section-container">
@@ -21,12 +24,11 @@ const PartnershipSection = () => {
           {/* Logos */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
             <div className="bg-card rounded-2xl p-8 shadow-card hover:shadow-lg transition-shadow">
-              <div className="w-40 h-24 bg-muted rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <span className="text-muted-foreground font-medium block">Logo AMAGIS</span>
-                  <span className="text-xs text-muted-foreground">1955 • 2025</span>
-                </div>
-              </div>
+              <img 
+                src={logoAmagis} 
+                alt="Logo AMAGIS - Associação dos Magistrados Mineiros" 
+                className="w-40 h-auto object-contain"
+              />
             </div>
 
             <div className="flex items-center">
@@ -36,9 +38,11 @@ const PartnershipSection = () => {
             </div>
 
             <div className="bg-card rounded-2xl p-8 shadow-card hover:shadow-lg transition-shadow">
-              <div className="w-40 h-24 bg-muted rounded-lg flex items-center justify-center">
-                <span className="text-muted-foreground font-medium">Logo CEPE Idiomas</span>
-              </div>
+              <img 
+                src={logoCepe} 
+                alt="Logo CEPE Idiomas" 
+                className="w-40 h-auto object-contain"
+              />
             </div>
           </div>
 
