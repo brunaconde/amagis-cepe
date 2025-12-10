@@ -6,7 +6,7 @@ const FAQSection = () => {
     {
       question: "Quem pode utilizar o desconto de 15%?",
       answer:
-        "O desconto é exclusivo para associados, dependentes e colaboradores da AMAGIS. Sua relação com a AMAGIS será verificada pela nossa equipe.",
+        "O desconto é para associados, dependentes e colaboradores da AMAGIS. Sua relação com a AMAGIS será verificada pela nossa equipe.",
     },
     {
       question: "O desconto é válido para qualquer programa?",
@@ -16,7 +16,7 @@ const FAQSection = () => {
     {
       question: "Quais idiomas e durações estão disponíveis?",
       answer:
-        "Oferecemos cursos de Espanhol, Inglês e Português, com durações de 2, 3 ou 4 semanas. Cada programa pode ser personalizado de acordo com suas necessidades e objetivos.",
+        "Oferecemos cursos de espanhol com durações de 2, 3 ou 4 semanas. O curso pode ser personalizado de acordo com suas necessidades e objetivos.",
     },
     {
       question: "Como o desconto é aplicado?",
