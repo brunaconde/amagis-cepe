@@ -51,18 +51,41 @@ const FormSection = () => {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
 
-    // Simula envio (será substituído pela integração real depois)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycbyfXvsjNaANTp93h03rSNH2UEgQE8EIWJ4vsvDqLOzCwRWjcdstVfGiVN2k2pNwVpDwUg/exec";
 
-    console.log("Form data:", data);
+    try {
+      const response = await fetch(GOOGLE_SHEETS_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nomeCompleto: data.nomeCompleto.trim(),
+          email: data.email.trim(),
+          telefone: data.telefone.trim(),
+          relacaoAmagis: data.relacaoAmagis,
+          duracaoPreferencial: data.duracaoPreferencial,
+          cidadeOrigem: data.cidadeOrigem?.trim() || "",
+        }),
+      });
 
-    toast({
-      title: "Formulário enviado com sucesso!",
-      description: "Entraremos em contato em até 48 horas úteis.",
-    });
+      // Com mode: "no-cors", não conseguimos ler a resposta, mas o envio funciona
+      toast({
+        title: "Formulário enviado com sucesso!",
+        description: "Entraremos em contato em até 48 horas úteis.",
+      });
 
-    reset();
-    setIsSubmitting(false);
+      reset();
+    } catch (error) {
+      toast({
+        title: "Erro ao enviar formulário",
+        description: "Tente novamente em alguns instantes.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
