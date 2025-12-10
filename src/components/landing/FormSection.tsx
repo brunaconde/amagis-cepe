@@ -61,12 +61,12 @@ const FormSection = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          nomeCompleto: data.nomeCompleto.trim(),
-          email: data.email.trim(),
-          telefone: data.telefone.trim(),
-          relacaoAmagis: data.relacaoAmagis,
-          duracaoPreferencial: data.duracaoPreferencial,
-          cidadeOrigem: data.cidadeOrigem?.trim() || "",
+          "Nome Completo": data.nomeCompleto.trim(),
+          "E-mail": data.email.trim(),
+          "Telefone com DDD": data.telefone.trim(),
+          "Relação com AMAGIS": data.relacaoAmagis,
+          "Duração Preferencial": data.duracaoPreferencial,
+          "Cidade de Origem": data.cidadeOrigem?.trim() || "",
         }),
       });
 
