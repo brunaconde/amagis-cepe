@@ -1,13 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Percent, Gift, Star } from "lucide-react";
-
+import { Gift, Star } from "lucide-react";
 const BenefitSection = () => {
   const scrollToForm = () => {
-    document.getElementById("formulario")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("formulario")?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <section className="section-padding bg-cepe-blue-dark relative overflow-hidden" id="beneficio">
+  return <section className="section-padding bg-cepe-blue-dark relative overflow-hidden" id="beneficio">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,_hsl(var(--cepe-gold))_0%,_transparent_50%)]" />
@@ -33,16 +32,10 @@ const BenefitSection = () => {
             </p>
 
             <ul className="space-y-4">
-              {[
-                "Válido para qualquer duração: 2, 3 ou 4 semanas",
-                "Extensivo a dependentes e colaboradores AMAGIS",
-                "Desconto exclusivo sobre o valor tabelado",
-              ].map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
+              {["Válido para qualquer duração: 2, 3 ou 4 semanas", "Extensivo a dependentes e colaboradores AMAGIS", "Desconto exclusivo sobre o valor tabelado"].map((item, index) => <li key={index} className="flex items-start gap-3">
                   <Star className="w-5 h-5 text-cepe-gold flex-shrink-0 mt-0.5" />
                   <span className="text-primary-foreground/90">{item}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
 
             <Button variant="hero" size="xl" onClick={scrollToForm}>
@@ -58,7 +51,7 @@ const BenefitSection = () => {
 
               {/* Main badge */}
               <div className="relative bg-gradient-to-br from-cepe-gold to-cepe-gold-light rounded-full w-64 h-64 md:w-80 md:h-80 flex flex-col items-center justify-center shadow-glow animate-pulse-soft">
-                <Percent className="w-12 h-12 text-cepe-blue-dark mb-2" />
+                
                 <span className="text-6xl md:text-8xl font-extrabold text-cepe-blue-dark">15</span>
                 <span className="text-2xl md:text-3xl font-bold text-cepe-blue-dark">% OFF</span>
                 <span className="text-sm font-medium text-cepe-blue-dark/80 mt-2">Desconto Exclusivo AMAGIS</span>
@@ -68,18 +61,15 @@ const BenefitSection = () => {
               <div className="absolute -top-4 -right-4 w-12 h-12 bg-cepe-green rounded-full flex items-center justify-center shadow-lg animate-float">
                 <span className="text-xl">✓</span>
               </div>
-              <div
-                className="absolute -bottom-4 -left-4 w-10 h-10 bg-primary-foreground rounded-full flex items-center justify-center shadow-lg animate-float"
-                style={{ animationDelay: "1s" }}
-              >
+              <div className="absolute -bottom-4 -left-4 w-10 h-10 bg-primary-foreground rounded-full flex items-center justify-center shadow-lg animate-float" style={{
+              animationDelay: "1s"
+            }}>
                 <span className="text-lg">🎓</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default BenefitSection;
