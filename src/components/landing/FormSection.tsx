@@ -1,6 +1,76 @@
 import { Shield, CheckCircle } from "lucide-react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useToast } from "@/hooks/use-toast";
+
+const formSchema = z.object({
+  nomeCompleto: z.string().min(3, "Nome deve ter pelo menos 3 caracteres"),
+  email: z.string().email("E-mail inválido"),
+  telefone: z.string().min(10, "Telefone deve ter pelo menos 10 dígitos"),
+  relacaoAmagis: z.string().min(1, "Selecione sua relação com AMAGIS"),
+  duracaoPreferencial: z.string().min(1, "Selecione a duração preferencial"),
+  cidadeOrigem: z.string().optional(),
+  privacidade: z.boolean().refine((val) => val === true, "Você deve aceitar a política de privacidade"),
+});
+
+type FormData = z.infer<typeof formSchema>;
 
 const FormSection = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      nomeCompleto: "",
+      email: "",
+      telefone: "",
+      relacaoAmagis: "",
+      duracaoPreferencial: "",
+      cidadeOrigem: "",
+      privacidade: false,
+    },
+  });
+
+  const privacidade = watch("privacidade");
+
+  const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    
+    // Simula envio (será substituído pela integração real depois)
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    
+    console.log("Form data:", data);
+    
+    toast({
+      title: "Formulário enviado com sucesso!",
+      description: "Entraremos em contato em até 48 horas úteis.",
+    });
+    
+    reset();
+    setIsSubmitting(false);
+  };
+
   return (
     <section className="section-padding bg-cepe-blue-dark relative overflow-hidden" id="formulario">
       {/* Background decoration */}
@@ -45,20 +115,138 @@ const FormSection = () => {
             </div>
           </div>
 
-          {/* Google Forms Embed */}
-          <div className="bg-card rounded-2xl shadow-card overflow-hidden">
-            <iframe 
-              src="https://docs.google.com/forms/d/e/1FAIpQLSe0TkAQey5KpONkK4k2UvbvUon_jtKqViHucSy3Z8UTM6Fkag/viewform?embedded=true" 
-              width="100%" 
-              height="1388"
-              frameBorder="0"
-              marginHeight={0}
-              marginWidth={0}
-              className="w-full"
-              title="Formulário de Interesse CEPE Idiomas"
-            >
-              Carregando formulário...
-            </iframe>
+          {/* Form */}
+          <div className="bg-card rounded-2xl shadow-card p-6 md:p-8">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+              {/* Nome Completo */}
+              <div className="space-y-2">
+                <Label htmlFor="nomeCompleto" className="text-foreground">
+                  Nome Completo <span className="text-destructive">*</span>
+                </Label>
+                <Input
+                  id="nomeCompleto"
+                  placeholder="Seu nome completo"
+                  {...register("nomeCompleto")}
+                  className={errors.nomeCompleto ? "border-destructive" : ""}
+                />
+                {errors.nomeCompleto && (
+                  <p className="text-sm text-destructive">{errors.nomeCompleto.message}</p>
+                )}
+              </div>
+
+              {/* E-mail */}
+              <div className="space-y-2">
+                <Label htmlFor="email" className="text-foreground">
+                  E-mail <span className="text-destructive">*</span>
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="seu@email.com"
+                  {...register("email")}
+                  className={errors.email ? "border-destructive" : ""}
+                />
+                {errors.email && (
+                  <p className="text-sm text-destructive">{errors.email.message}</p>
+                )}
+              </div>
+
+              {/* Telefone */}
+              <div className="space-y-2">
+                <Label htmlFor="telefone" className="text-foreground">
+                  Telefone com DDD <span className="text-destructive">*</span>
+                </Label>
+                <Input
+                  id="telefone"
+                  type="tel"
+                  placeholder="(31) 99999-9999"
+                  {...register("telefone")}
+                  className={errors.telefone ? "border-destructive" : ""}
+                />
+                {errors.telefone && (
+                  <p className="text-sm text-destructive">{errors.telefone.message}</p>
+                )}
+              </div>
+
+              {/* Relação com AMAGIS */}
+              <div className="space-y-2">
+                <Label htmlFor="relacaoAmagis" className="text-foreground">
+                  Relação com AMAGIS <span className="text-destructive">*</span>
+                </Label>
+                <Select onValueChange={(value) => setValue("relacaoAmagis", value)}>
+                  <SelectTrigger className={errors.relacaoAmagis ? "border-destructive" : ""}>
+                    <SelectValue placeholder="Selecione sua relação" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="associado">Associado</SelectItem>
+                    <SelectItem value="dependente">Dependente</SelectItem>
+                    <SelectItem value="colaborador">Colaborador</SelectItem>
+                  </SelectContent>
+                </Select>
+                {errors.relacaoAmagis && (
+                  <p className="text-sm text-destructive">{errors.relacaoAmagis.message}</p>
+                )}
+              </div>
+
+              {/* Duração Preferencial */}
+              <div className="space-y-2">
+                <Label htmlFor="duracaoPreferencial" className="text-foreground">
+                  Duração Preferencial <span className="text-destructive">*</span>
+                </Label>
+                <Select onValueChange={(value) => setValue("duracaoPreferencial", value)}>
+                  <SelectTrigger className={errors.duracaoPreferencial ? "border-destructive" : ""}>
+                    <SelectValue placeholder="Selecione a duração" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="2-semanas">2 Semanas</SelectItem>
+                    <SelectItem value="3-semanas">3 Semanas</SelectItem>
+                    <SelectItem value="4-semanas">4 Semanas</SelectItem>
+                  </SelectContent>
+                </Select>
+                {errors.duracaoPreferencial && (
+                  <p className="text-sm text-destructive">{errors.duracaoPreferencial.message}</p>
+                )}
+              </div>
+
+              {/* Cidade de Origem */}
+              <div className="space-y-2">
+                <Label htmlFor="cidadeOrigem" className="text-foreground">
+                  Cidade de Origem
+                </Label>
+                <Input
+                  id="cidadeOrigem"
+                  placeholder="Ex: Belo Horizonte"
+                  {...register("cidadeOrigem")}
+                />
+              </div>
+
+              {/* Checkbox de Privacidade */}
+              <div className="space-y-2">
+                <div className="flex items-start gap-3">
+                  <Checkbox
+                    id="privacidade"
+                    checked={privacidade}
+                    onCheckedChange={(checked) => setValue("privacidade", checked as boolean)}
+                    className={errors.privacidade ? "border-destructive" : ""}
+                  />
+                  <Label htmlFor="privacidade" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+                    Concordo com a política de privacidade e autorizo o contato por e-mail ou telefone. <span className="text-destructive">*</span>
+                  </Label>
+                </div>
+                {errors.privacidade && (
+                  <p className="text-sm text-destructive">{errors.privacidade.message}</p>
+                )}
+              </div>
+
+              {/* Submit Button */}
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-cepe-green hover:bg-cepe-green/90 text-white font-semibold py-6 text-lg"
+              >
+                {isSubmitting ? "Enviando..." : "Receber Meu Desconto e Contato!"}
+              </Button>
+            </form>
           </div>
         </div>
       </div>
