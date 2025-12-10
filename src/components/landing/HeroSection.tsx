@@ -7,6 +7,10 @@ const HeroSection = () => {
     document.getElementById("formulario")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollToTestimonials = () => {
+    document.getElementById("depoimentos")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="relative min-h-screen flex items-center bg-hero-gradient overflow-hidden">
       {/* Background decorative elements */}
@@ -41,7 +45,7 @@ const HeroSection = () => {
                 Quero Meu Desconto Exclusivo!
                 <ChevronDown className="w-5 h-5 animate-bounce" />
               </Button>
-              <Button variant="ctaOutline" size="xl" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+              <Button variant="ctaOutline" size="xl" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" onClick={scrollToTestimonials}>
                 <Play className="w-5 h-5" />
                 Ver Vídeo
               </Button>
