@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
+import logoCepeWhite from "@/assets/logo-cepe-white.png";
 
 const Footer = () => {
   return (
@@ -7,11 +8,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and description */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-cepe-gold rounded-lg flex items-center justify-center">
-                <span className="font-bold text-foreground text-lg">C</span>
-              </div>
-              <span className="text-xl font-bold">CEPE Idiomas</span>
+            <div className="flex items-center mb-4">
+              <img 
+                src={logoCepeWhite} 
+                alt="CEPE Idiomas" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-primary-foreground/80 mb-4 max-w-md">
               Transformando vidas através do aprendizado de idiomas há mais de 15 anos. Parceria oficial com a AMAGIS
