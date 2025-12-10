@@ -14,17 +14,26 @@ const Footer = () => {
               <span className="text-xl font-bold">CEPE Idiomas</span>
             </div>
             <p className="text-primary-foreground/80 mb-4 max-w-md">
-              Transformando vidas através do aprendizado de idiomas há mais de 20 anos. 
-              Parceria oficial com a AMAGIS para oferecer experiências educacionais exclusivas.
+              Transformando vidas através do aprendizado de idiomas há mais de 15 anos. Parceria oficial com a AMAGIS
+              para oferecer experiências educacionais exclusivas.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-cepe-gold hover:text-foreground transition-colors">
+              <a
+                href="#"
+                className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-cepe-gold hover:text-foreground transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-cepe-gold hover:text-foreground transition-colors">
+              <a
+                href="#"
+                className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-cepe-gold hover:text-foreground transition-colors"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-cepe-gold hover:text-foreground transition-colors">
+              <a
+                href="#"
+                className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-cepe-gold hover:text-foreground transition-colors"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -35,21 +44,27 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Contato</h4>
             <ul className="space-y-3">
               <li>
-                <a href="mailto:contato@cepeidiomas.com.br" className="flex items-center gap-2 text-primary-foreground/80 hover:text-cepe-gold transition-colors">
+                <a
+                  href="mailto:cursos@cepeidiomas.com.br"
+                  className="flex items-center gap-2 text-primary-foreground/80 hover:text-cepe-gold transition-colors"
+                >
                   <Mail className="w-4 h-4" />
-                  contato@cepeidiomas.com.br
+                  cursos@cepeidiomas.com.br
                 </a>
               </li>
               <li>
-                <a href="tel:+553199999999" className="flex items-center gap-2 text-primary-foreground/80 hover:text-cepe-gold transition-colors">
+                <a
+                  href="tel:+553199999999"
+                  className="flex items-center gap-2 text-primary-foreground/80 hover:text-cepe-gold transition-colors"
+                >
                   <Phone className="w-4 h-4" />
-                  (31) 9999-9999
+                  (xx) 9999-9999
                 </a>
               </li>
               <li>
                 <span className="flex items-start gap-2 text-primary-foreground/80">
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                  Belo Horizonte, MG - Brasil
+                  Córdoba - Argentina
                 </span>
               </li>
             </ul>
@@ -80,7 +95,12 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://cepeidiomas.com.br" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-cepe-gold transition-colors">
+                <a
+                  href="https://cepeidiomas.com.br"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-foreground/80 hover:text-cepe-gold transition-colors"
+                >
                   Site CEPE Idiomas
                 </a>
               </li>
@@ -91,8 +111,12 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
           <p>© {new Date().getFullYear()} CEPE Idiomas. Todos os direitos reservados.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-cepe-gold transition-colors">Política de Privacidade</a>
-            <a href="#" className="hover:text-cepe-gold transition-colors">Termos de Uso</a>
+            <a href="#" className="hover:text-cepe-gold transition-colors">
+              Política de Privacidade
+            </a>
+            <a href="#" className="hover:text-cepe-gold transition-colors">
+              Termos de Uso
+            </a>
           </div>
         </div>
       </div>
