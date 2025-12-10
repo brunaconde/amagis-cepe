@@ -7,13 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 
 const formSchema = z.object({
@@ -56,17 +50,17 @@ const FormSection = () => {
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
-    
+
     // Simula envio (será substituído pela integração real depois)
     await new Promise((resolve) => setTimeout(resolve, 1500));
-    
+
     console.log("Form data:", data);
-    
+
     toast({
       title: "Formulário enviado com sucesso!",
       description: "Entraremos em contato em até 48 horas úteis.",
     });
-    
+
     reset();
     setIsSubmitting(false);
   };
@@ -87,15 +81,15 @@ const FormSection = () => {
               Pronto para Seu Intercâmbio? Preencha Seus Dados e Garanta Seu Desconto!
             </h2>
             <p className="text-lg text-primary-foreground/90 mb-8">
-              Preencha o formulário abaixo e nossa equipe entrará em contato para apresentar todas as opções de programa e garantir seu desconto exclusivo de 15%.
+              Preencha o formulário abaixo e nossa equipe entrará em contato para apresentar todas as opções de programa
+              e garantir seu desconto exclusivo de 15%.
             </p>
 
             <div className="space-y-4">
               {[
-                "Resposta em até 48 horas úteis",
                 "Orientação personalizada sobre programas",
                 "Desconto aplicado automaticamente",
-                "Sem compromisso de matrícula"
+                "Sem compromisso de matrícula",
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-cepe-gold flex-shrink-0" />
@@ -129,9 +123,7 @@ const FormSection = () => {
                   {...register("nomeCompleto")}
                   className={errors.nomeCompleto ? "border-destructive" : ""}
                 />
-                {errors.nomeCompleto && (
-                  <p className="text-sm text-destructive">{errors.nomeCompleto.message}</p>
-                )}
+                {errors.nomeCompleto && <p className="text-sm text-destructive">{errors.nomeCompleto.message}</p>}
               </div>
 
               {/* E-mail */}
@@ -146,9 +138,7 @@ const FormSection = () => {
                   {...register("email")}
                   className={errors.email ? "border-destructive" : ""}
                 />
-                {errors.email && (
-                  <p className="text-sm text-destructive">{errors.email.message}</p>
-                )}
+                {errors.email && <p className="text-sm text-destructive">{errors.email.message}</p>}
               </div>
 
               {/* Telefone */}
@@ -163,9 +153,7 @@ const FormSection = () => {
                   {...register("telefone")}
                   className={errors.telefone ? "border-destructive" : ""}
                 />
-                {errors.telefone && (
-                  <p className="text-sm text-destructive">{errors.telefone.message}</p>
-                )}
+                {errors.telefone && <p className="text-sm text-destructive">{errors.telefone.message}</p>}
               </div>
 
               {/* Relação com AMAGIS */}
@@ -183,9 +171,7 @@ const FormSection = () => {
                     <SelectItem value="colaborador">Colaborador</SelectItem>
                   </SelectContent>
                 </Select>
-                {errors.relacaoAmagis && (
-                  <p className="text-sm text-destructive">{errors.relacaoAmagis.message}</p>
-                )}
+                {errors.relacaoAmagis && <p className="text-sm text-destructive">{errors.relacaoAmagis.message}</p>}
               </div>
 
               {/* Duração Preferencial */}
@@ -213,11 +199,7 @@ const FormSection = () => {
                 <Label htmlFor="cidadeOrigem" className="text-foreground">
                   Cidade de Origem
                 </Label>
-                <Input
-                  id="cidadeOrigem"
-                  placeholder="Ex: Belo Horizonte"
-                  {...register("cidadeOrigem")}
-                />
+                <Input id="cidadeOrigem" placeholder="Ex: Belo Horizonte" {...register("cidadeOrigem")} />
               </div>
 
               {/* Checkbox de Privacidade */}
@@ -230,12 +212,11 @@ const FormSection = () => {
                     className={errors.privacidade ? "border-destructive" : ""}
                   />
                   <Label htmlFor="privacidade" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
-                    Concordo com a política de privacidade e autorizo o contato por e-mail ou telefone. <span className="text-destructive">*</span>
+                    Concordo com a política de privacidade e autorizo o contato por e-mail ou telefone.{" "}
+                    <span className="text-destructive">*</span>
                   </Label>
                 </div>
-                {errors.privacidade && (
-                  <p className="text-sm text-destructive">{errors.privacidade.message}</p>
-                )}
+                {errors.privacidade && <p className="text-sm text-destructive">{errors.privacidade.message}</p>}
               </div>
 
               {/* Submit Button */}
