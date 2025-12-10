@@ -1,4 +1,5 @@
 import { MapPin, GraduationCap, Users, Building, BookOpen, Globe, Coffee, Shield } from "lucide-react";
+import cordobaPlaza from "@/assets/cordoba-plaza.webp";
 
 const WhySection = () => {
   return (
@@ -23,8 +24,8 @@ const WhySection = () => {
 
             <div className="aspect-video rounded-2xl overflow-hidden shadow-card mb-6">
               <img
-                src="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=800&q=80"
-                alt="Córdoba, Argentina - La Docta"
+                src={cordobaPlaza}
+                alt="Plaza San Martín em Córdoba, Argentina"
                 className="w-full h-full object-cover"
               />
             </div>
