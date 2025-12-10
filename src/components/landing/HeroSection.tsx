@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Play } from "lucide-react";
+import heroCepeStudents from "@/assets/hero-cepe-students.png";
 
 const HeroSection = () => {
   const scrollToForm = () => {
@@ -68,8 +69,8 @@ const HeroSection = () => {
           <div className="relative animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-card">
               <img
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80"
-                alt="Estudantes em intercâmbio - aluno vestindo camisa do CEPE em Córdoba"
+                src={heroCepeStudents}
+                alt="Estudantes CEPE Idiomas em Córdoba, Argentina"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-cepe-blue-dark/60 to-transparent" />
