@@ -3,7 +3,10 @@ import { BookOpen, ArrowRight } from "lucide-react";
 
 const TestSection = () => {
   return (
-    <section className="section-padding bg-gradient-to-br from-cepe-green to-cepe-green-light relative overflow-hidden" id="teste">
+    <section
+      className="section-padding bg-gradient-to-br from-cepe-green to-cepe-green-light relative overflow-hidden"
+      id="teste"
+    >
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary-foreground rounded-full -translate-y-1/2 translate-x-1/2" />
@@ -17,39 +20,15 @@ const TestSection = () => {
             Teste Gratuito
           </div>
 
-          <h2 className="heading-lg mb-6">
-            Curioso(a) para Saber Seu Nível de Espanhol?
-          </h2>
+          <h2 className="heading-lg mb-6">Curioso(a) para Saber Seu Nível de Espanhol?</h2>
 
           <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Antes de embarcar para sua aventura em Córdoba, que tal descobrir seu nível de espanhol? 
-            Faça nosso teste online rápido e gratuito. Em poucos minutos, você terá uma estimativa do seu conhecimento 
-            e um primeiro passo para planejar seu intercâmbio com o CEPE Idiomas.
+            Antes de embarcar para sua aventura em Córdoba, que tal descobrir seu nível de espanhol? Faça nosso teste
+            online rápido e gratuito. Em poucos minutos, você terá uma estimativa do seu conhecimento e um primeiro
+            passo para planejar seu intercâmbio com o CEPE Idiomas.
           </p>
 
-          <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <div className="grid sm:grid-cols-3 gap-6 text-center">
-              <div>
-                <p className="text-3xl font-bold mb-1">5 min</p>
-                <p className="text-sm text-primary-foreground/80">Duração média</p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold mb-1">20</p>
-                <p className="text-sm text-primary-foreground/80">Questões</p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold mb-1">100%</p>
-                <p className="text-sm text-primary-foreground/80">Gratuito</p>
-              </div>
-            </div>
-          </div>
-
-          <Button
-            asChild
-            variant="hero"
-            size="xl"
-            className="group"
-          >
+          <Button asChild variant="hero" size="xl" className="group">
             <a href="https://cepeidiomas.com.br/teste-de-espanhol" target="_blank" rel="noopener noreferrer">
               Fazer Teste Gratuito de Espanhol!
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
