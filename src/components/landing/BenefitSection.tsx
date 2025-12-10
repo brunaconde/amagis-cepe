@@ -23,7 +23,7 @@ const BenefitSection = () => {
               Oferta Exclusiva
             </div>
 
-            <h2 className="heading-lg">15% de Desconto EXCLUSIVO: Realize o seu sonho e de sua família!</h2>
+            <h2 className="heading-lg">15% de Desconto: Realize o seu sonho e de sua família!</h2>
 
             <p className="text-lg text-primary-foreground/90">
               Como membro da comunidade AMAGIS, você garante um benefício único:{" "}
