@@ -110,8 +110,8 @@ const WhySection = () => {
                 },
                 {
                   icon: Shield,
-                  title: "Três Idiomas Disponíveis",
-                  description: "Escolha entre Espanhol, Inglês ou Português com professores altamente qualificados.",
+                  title: "Quatro níveis progressivos",
+                  description: "Nosso curso é estruturado do Iniciante (A1) ao Avançado Superior (C2)",
                 },
               ].map((item, index) => (
                 <div
