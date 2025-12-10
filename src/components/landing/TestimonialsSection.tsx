@@ -1,10 +1,12 @@
 import { Quote, Star } from "lucide-react";
+import henriquePhoto from "@/assets/henrique-testimonial.jpeg";
 
 const TestimonialsSection = () => {
   const testimonials = [
     {
       name: "Henrique",
       role: "Representante CEPE junto à AMAGIS",
+      photo: henriquePhoto,
       quote: "Eu e meu irmão saímos de Belo Horizonte e fizemos uma viagem de carro de 4.000 km até Córdoba, na Argentina, onde ficamos três semanas mergulhados na cultura e no aprendizado na CEPE Idiomas. Além de estudar espanhol, vivi algo que vai muito além do idioma: entender de verdade as nuances, expressões e detalhes que fazem toda a diferença no dia a dia. Tem uma distância enorme entre \"achar que sabe\" espanhol e realmente falar e entender, sabe?\n\nA CEPE foi fundamental nisso. Eles não só ensinam o idioma, mas também nos conectam com a cultura de um jeito único. E vou te dizer: aprender espanhol foi uma das melhores escolhas que já fiz. Muita gente só pensa no inglês ou no francês, mas o espanhol abre portas gigantes no mundo – tanto na vida pessoal quanto na profissional.\n\nSe você está querendo dar um passo pra evoluir, explorar o mundo e abrir novas oportunidades, o espanhol da CEPE é o caminho certo. A vivência que eles proporcionam vai além das aulas e realmente amplia nossos horizontes.",
       rating: 5
     }
@@ -41,29 +43,31 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl p-6 shadow-card hover:shadow-lg transition-shadow border border-border relative"
+              className="bg-card rounded-2xl p-6 sm:p-8 shadow-card hover:shadow-lg transition-shadow border border-border relative"
             >
               <Quote className="absolute top-4 right-4 w-8 h-8 text-cepe-gold/20" />
               
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-cepe-gold text-cepe-gold" />
-                ))}
+              {/* Featured photo and name */}
+              <div className="flex flex-col items-center text-center mb-6">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-cepe-gold/30 shadow-lg mb-4">
+                  <img 
+                    src={testimonial.photo} 
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="font-bold text-lg text-foreground">{testimonial.name}</h3>
+                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                <div className="flex items-center gap-1 mt-2">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-cepe-gold text-cepe-gold" />
+                  ))}
+                </div>
               </div>
 
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-center sm:text-left">
                 "{testimonial.quote}"
               </p>
-
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-cepe-blue to-cepe-blue-light rounded-full flex items-center justify-center text-primary-foreground font-bold">
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                </div>
-              </div>
             </div>
           ))}
         </div>
