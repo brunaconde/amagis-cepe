@@ -51,7 +51,8 @@ const FormSection = () => {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
 
-    const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycbyfXvsjNaANTp93h03rSNH2UEgQE8EIWJ4vsvDqLOzCwRWjcdstVfGiVN2k2pNwVpDwUg/exec";
+    const GOOGLE_SHEETS_URL =
+      "https://script.google.com/macros/s/AKfycbyfXvsjNaANTp93h03rSNH2UEgQE8EIWJ4vsvDqLOzCwRWjcdstVfGiVN2k2pNwVpDwUg/exec";
 
     try {
       const response = await fetch(GOOGLE_SHEETS_URL, {
@@ -73,7 +74,7 @@ const FormSection = () => {
       // Com mode: "no-cors", não conseguimos ler a resposta, mas o envio funciona
       toast({
         title: "Formulário enviado com sucesso!",
-        description: "Entraremos em contato em até 48 horas úteis.",
+        description: "Entraremos em contato o mais breve possível.",
       });
 
       reset();
@@ -105,7 +106,7 @@ const FormSection = () => {
             </h2>
             <p className="text-lg text-primary-foreground/90 mb-8">
               Preencha o formulário abaixo e nossa equipe entrará em contato para apresentar todas as opções de programa
-              e garantir seu desconto exclusivo de 15%.
+              e garantir seu desconto de 15%.
             </p>
 
             <div className="space-y-4">
@@ -234,7 +235,10 @@ const FormSection = () => {
                     onCheckedChange={(checked) => setValue("privacidade", checked as boolean)}
                     className={`flex-shrink-0 ${errors.privacidade ? "border-destructive" : ""}`}
                   />
-                  <Label htmlFor="privacidade" className="text-sm text-muted-foreground leading-relaxed cursor-pointer break-words">
+                  <Label
+                    htmlFor="privacidade"
+                    className="text-sm text-muted-foreground leading-relaxed cursor-pointer break-words"
+                  >
                     Concordo com a política de privacidade e autorizo o contato por e-mail ou telefone.{" "}
                     <span className="text-destructive">*</span>
                   </Label>

@@ -16,8 +16,14 @@ const HeroSection = () => {
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-cepe-gold/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute top-1/2 -left-20 w-60 h-60 bg-cepe-green/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
-        <div className="absolute bottom-20 right-1/4 w-40 h-40 bg-primary-foreground/5 rounded-full blur-2xl animate-float" style={{ animationDelay: "4s" }} />
+        <div
+          className="absolute top-1/2 -left-20 w-60 h-60 bg-cepe-green/10 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: "2s" }}
+        />
+        <div
+          className="absolute bottom-20 right-1/4 w-40 h-40 bg-primary-foreground/5 rounded-full blur-2xl animate-float"
+          style={{ animationDelay: "4s" }}
+        />
       </div>
 
       <div className="section-container relative z-10 py-20">
@@ -30,22 +36,26 @@ const HeroSection = () => {
             </div>
 
             <h1 className="heading-xl">
-              AMAGIS e CEPE Idiomas:{" "}
-              <span className="text-gradient">Seu Intercâmbio em Córdoba</span>{" "}
-              com 15% de Desconto Exclusivo!
+              AMAGIS e CEPE Idiomas: <span className="text-gradient">Seu Intercâmbio em Córdoba</span> com 15% de
+              Desconto!
             </h1>
 
             <p className="text-lg md:text-xl text-primary-foreground/90 max-w-xl">
-              Uma parceria que abre as portas do mundo para associados, dependentes e colaboradores AMAGIS. 
-              Viva uma imersão cultural e linguística inesquecível na vibrante Argentina!
+              Uma parceria que abre as portas do mundo para associados, dependentes e colaboradores AMAGIS. Viva uma
+              imersão cultural e linguística inesquecível na vibrante Argentina!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button variant="hero" size="xl" onClick={scrollToForm}>
-                Quero Meu Desconto Exclusivo!
+                Quero Meu Desconto!
                 <ChevronDown className="w-5 h-5 animate-bounce" />
               </Button>
-              <Button variant="ctaOutline" size="xl" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" onClick={scrollToTestimonials}>
+              <Button
+                variant="ctaOutline"
+                size="xl"
+                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+                onClick={scrollToTestimonials}
+              >
                 <Play className="w-5 h-5" />
                 Ver Vídeo
               </Button>
@@ -78,7 +88,7 @@ const HeroSection = () => {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-cepe-blue-dark/60 to-transparent" />
-              
+
               {/* Floating card */}
               <div className="absolute bottom-4 left-4 right-4 bg-card/95 backdrop-blur-sm rounded-xl p-4 shadow-card">
                 <div className="flex items-center gap-3">

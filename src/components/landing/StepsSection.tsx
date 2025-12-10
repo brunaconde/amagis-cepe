@@ -6,46 +6,43 @@ const StepsSection = () => {
       number: 1,
       icon: ClipboardCheck,
       title: "Preencha o Formulário",
-      description: "Insira seus dados no formulário abaixo para validar sua elegibilidade como membro da comunidade AMAGIS."
+      description:
+        "Insira seus dados no formulário abaixo para validar sua elegibilidade como membro da comunidade AMAGIS.",
     },
     {
       number: 2,
       icon: MessageSquare,
       title: "Receba Nosso Contato",
-      description: "Nossa equipe entrará em contato em breve para entender seus objetivos e apresentar os programas ideais."
+      description:
+        "Nossa equipe entrará em contato em breve para entender seus objetivos e apresentar os programas ideais.",
     },
     {
       number: 3,
       icon: FileCheck,
-      title: "Escolha Seu Programa",
-      description: "Selecione o curso e a duração que mais se adequam a você: 2, 3 ou 4 semanas de imersão."
+      title: "Escolha a Duração",
+      description: "Selecione a duração que mais se adequa a você: 2, 3 ou 4 semanas de imersão.",
     },
     {
       number: 4,
       icon: Percent,
       title: "Desconto Aplicado",
-      description: "Seu desconto exclusivo de 15% será automaticamente aplicado sobre o valor tabelado!"
-    }
+      description: "Seu desconto de 15% será automaticamente aplicado sobre o valor tabelado!",
+    },
   ];
 
   return (
     <section className="section-padding bg-muted/50" id="como-aproveitar">
       <div className="section-container">
         <div className="text-center mb-12">
-          <h2 className="heading-lg text-foreground mb-4">
-            É Simples Garantir Seu Benefício!
-          </h2>
+          <h2 className="heading-lg text-foreground mb-4">É Simples Garantir Seu Benefício!</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Em apenas 4 passos simples, você garante seu desconto exclusivo e inicia sua jornada de aprendizado.
+            Em apenas 4 passos simples, você garante seu desconto e inicia sua jornada de aprendizado.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, index) => (
-            <div
-              key={index}
-              className="relative"
-            >
+            <div key={index} className="relative">
               {/* Connector line */}
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-12 left-[calc(50%+32px)] w-[calc(100%-64px)] h-0.5 bg-border" />

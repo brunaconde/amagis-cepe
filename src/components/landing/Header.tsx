@@ -24,7 +24,7 @@ const Header = () => {
   const navLinks = [
     { label: "Parceria", id: "parceria" },
     { label: "Benefício", id: "beneficio" },
-    { label: "Por Quê?", id: "porque" },
+    { label: "Por quê?", id: "porque" },
     { label: "Cronograma", id: "cronograma" },
     { label: "Depoimentos", id: "depoimentos" },
     { label: "FAQ", id: "faq" },
@@ -33,18 +33,16 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-card/95 backdrop-blur-md shadow-soft py-2"
-          : "bg-transparent py-4"
+        isScrolled ? "bg-card/95 backdrop-blur-md shadow-soft py-2" : "bg-transparent py-4"
       }`}
     >
       <div className="section-container">
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src={isScrolled ? logoCepeColor : logoCepeWhite} 
-              alt="CEPE Idiomas" 
+            <img
+              src={isScrolled ? logoCepeColor : logoCepeWhite}
+              alt="CEPE Idiomas"
               className="h-10 w-auto transition-all duration-300"
             />
           </div>
@@ -98,11 +96,7 @@ const Header = () => {
                   {link.label}
                 </button>
               ))}
-              <Button
-                variant="cta"
-                onClick={() => scrollToSection("formulario")}
-                className="mt-2"
-              >
+              <Button variant="cta" onClick={() => scrollToSection("formulario")} className="mt-2">
                 Quero o Desconto
               </Button>
             </div>
