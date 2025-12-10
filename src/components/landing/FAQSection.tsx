@@ -51,7 +51,7 @@ const FAQSection = () => {
     {
       question: "Como entro em contato para mais informações?",
       answer:
-        "Preencha o formulário nesta página! A equipe do CEPE Idiomas entrará em contato para tirar todas as suas dúvidas e ajudar você a planejar seu intercâmbio com o desconto exclusivo AMAGIS.",
+        "Preencha o formulário nesta página! A equipe do CEPE Idiomas entrará em contato para tirar todas as suas dúvidas e ajudar você a planejar seu intercâmbio com o desconto AMAGIS.",
     },
   ];
 
