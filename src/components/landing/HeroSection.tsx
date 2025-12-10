@@ -32,7 +32,7 @@ const HeroSection = () => {
           <div className="text-primary-foreground space-y-6 animate-slide-up">
             <div className="inline-flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium">
               <span className="w-2 h-2 bg-cepe-gold rounded-full animate-pulse" />
-              Parceria Exclusiva AMAGIS
+              Conveniada AMAGIS
             </div>
 
             <h1 className="heading-xl">
