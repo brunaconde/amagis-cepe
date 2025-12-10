@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logoCepe from "@/assets/logo-cepe-idiomas.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,13 +40,12 @@ const Header = () => {
       <div className="section-container">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${isScrolled ? "bg-cepe-blue" : "bg-cepe-gold"}`}>
-              <span className={`font-bold text-lg ${isScrolled ? "text-primary-foreground" : "text-foreground"}`}>C</span>
-            </div>
-            <span className={`font-bold text-lg hidden sm:block ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
-              CEPE Idiomas
-            </span>
+          <div className="flex items-center">
+            <img 
+              src={logoCepe} 
+              alt="CEPE Idiomas" 
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
