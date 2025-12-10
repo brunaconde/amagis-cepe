@@ -27,9 +27,9 @@ const BenefitSection = () => {
 
             <p className="text-lg text-primary-foreground/90">
               Como membro da comunidade AMAGIS, você garante um benefício único:{" "}
-              <strong className="text-cepe-gold">15% de desconto</strong> sobre o valor tabelado em qualquer programa de
-              intercâmbio do CEPE Idiomas! Seja para aprender ou aprimorar o espanhol, inglês ou português, este
-              benefício é a sua porta de entrada para uma aventura enriquecedora, com uma economia significativa.
+              <strong className="text-cepe-gold">15% de desconto</strong> sobre o valor tabelado do programa de
+              intercâmbio do CEPE Idiomas! Este benefício é a sua porta de entrada para uma aventura enriquecedora, com
+              uma economia significativa.
             </p>
 
             <ul className="space-y-4">
