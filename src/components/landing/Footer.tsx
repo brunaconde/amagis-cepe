@@ -21,19 +21,25 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/cepecordoba/?utm_source=site&utm_medium=landingpage&utm_campaign=amagis_parceria"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-cepe-gold hover:text-foreground transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/cepeidiomasintercambio?utm_source=site&utm_medium=landingpage&utm_campaign=amagis_parceria"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-cepe-gold hover:text-foreground transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/school/cepeidiomas/?utm_source=site&utm_medium=landingpage&utm_campaign=amagis_parceria"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-cepe-gold hover:text-foreground transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
