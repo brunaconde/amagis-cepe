@@ -3,7 +3,8 @@ import logoAmagis from "@/assets/logo-amagis.png";
 import logoCepe from "@/assets/logo-cepe-idiomas.png";
 
 const PartnershipSection = () => {
-  return <section className="section-padding bg-background" id="parceria">
+  return (
+    <section className="section-padding bg-background" id="parceria">
       <div className="section-container">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-cepe-gold/10 text-cepe-gold rounded-full px-4 py-2 text-sm font-medium mb-4">
@@ -24,9 +25,9 @@ const PartnershipSection = () => {
           {/* Logos */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
             <div className="bg-card rounded-2xl p-8 shadow-card hover:shadow-lg transition-shadow">
-              <img 
-                src={logoAmagis} 
-                alt="Logo AMAGIS - Associação dos Magistrados Mineiros" 
+              <img
+                src={logoAmagis}
+                alt="Logo AMAGIS - Associação dos Magistrados Mineiros"
                 className="w-40 h-auto object-contain"
               />
             </div>
@@ -38,11 +39,7 @@ const PartnershipSection = () => {
             </div>
 
             <div className="bg-card rounded-2xl p-8 shadow-card hover:shadow-lg transition-shadow">
-              <img 
-                src={logoCepe} 
-                alt="Logo CEPE Idiomas" 
-                className="w-40 h-auto object-contain"
-              />
+              <img src={logoCepe} alt="Logo CEPE Idiomas" className="w-40 h-auto object-contain" />
             </div>
           </div>
 
@@ -65,13 +62,14 @@ const PartnershipSection = () => {
                 <Award className="w-8 h-8 text-foreground" />
               </div>
               <div>
-                <h4 className="font-bold text-foreground">Parceria Exclusiva</h4>
-                <p className="text-sm text-muted-foreground">Acesso a um benefício que ninguém mais tem</p>
+                <h4 className="font-bold text-foreground">Parceria Inédita</h4>
+                <p className="text-sm text-muted-foreground">Benefício de desconto para toda comunidade AMAGIS.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 export default PartnershipSection;
