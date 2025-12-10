@@ -35,7 +35,6 @@ const BenefitSection = () => {
             <ul className="space-y-4">
               {[
                 "Válido para qualquer duração: 2, 3 ou 4 semanas",
-                "Válido para qualquer idioma: Espanhol, Inglês ou Português",
                 "Extensivo a dependentes e colaboradores AMAGIS",
                 "Desconto exclusivo sobre o valor tabelado",
               ].map((item, index) => (
