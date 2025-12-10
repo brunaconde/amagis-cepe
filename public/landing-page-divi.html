@@ -1,0 +1,2915 @@
+<!--
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║  LANDING PAGE AMAGIS + CEPE IDIOMAS - VERSÃO PARA DIVI                        ║
+║  Otimizado para colar no módulo de Código do Divi Builder                     ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║  INSTRUÇÕES DE USO:                                                           ║
+║  1. No WordPress, crie uma nova página                                        ║
+║  2. Edite com Divi Builder > Modelo de Página: "Blank Page"                   ║
+║  3. Adicione uma única Seção > Linha > Módulo "Código"                        ║
+║  4. Cole TODO este código no módulo                                           ║
+║  5. Salve e visualize                                                         ║
+║                                                                               ║
+║  IMAGENS A SUBSTITUIR:                                                        ║
+║  - [IMG_LOGO_CEPE_BRANCO]: Logo CEPE branco para header                       ║
+║  - [IMG_LOGO_CEPE_COR]: Logo CEPE colorido                                    ║
+║  - [IMG_LOGO_AMAGIS]: Logo AMAGIS                                             ║
+║  - [IMG_HERO]: Imagem principal do hero (estudantes)                          ║
+║  - [IMG_CORDOBA]: Foto da praça de Córdoba                                    ║
+║  - [IMG_CEPE_SALA]: Foto da sala de aula CEPE                                 ║
+║                                                                               ║
+║  URLs A CONFIGURAR:                                                           ║
+║  - Google Sheets: já configurado                                              ║
+║  - Teste de Espanhol: já configurado                                          ║
+║  - Redes Sociais: já configuradas com UTMs                                    ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Parceria exclusiva AMAGIS e CEPE Idiomas: Intercâmbio de espanhol em Córdoba, Argentina com 15% de desconto para associados, dependentes e colaboradores.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>AMAGIS + CEPE Idiomas | Intercâmbio em Córdoba com 15% OFF</title>
+  
+  <!-- Google Fonts - Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ═══════════════════════════════════════════════════════════════
+       VARIÁVEIS CSS - Cores e configurações (fácil customização)
+       ═══════════════════════════════════════════════════════════════ */
+    :root {
+      /* Cores principais CEPE */
+      --cepe-blue: #1a365d;
+      --cepe-blue-dark: #0f2744;
+      --cepe-blue-light: #2d4a6f;
+      --cepe-gold: #d4af37;
+      --cepe-gold-light: #e6c555;
+      --cepe-green: #90c033;
+      --cepe-green-dark: #7aa82b;
+      
+      /* Cores de interface */
+      --background: #ffffff;
+      --foreground: #1a365d;
+      --muted: #f1f5f9;
+      --muted-foreground: #64748b;
+      --border: #e2e8f0;
+      
+      /* Gradientes */
+      --gradient-hero: linear-gradient(135deg, #1a365d 0%, #0f2744 50%, #1a365d 100%);
+      --gradient-gold: linear-gradient(135deg, #d4af37 0%, #e6c555 100%);
+      
+      /* Sombras */
+      --shadow-soft: 0 4px 20px rgba(26, 54, 93, 0.08);
+      --shadow-card: 0 10px 40px rgba(26, 54, 93, 0.12);
+      --shadow-glow: 0 0 30px rgba(212, 175, 55, 0.4);
+      
+      /* Transições */
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       RESET E BASE
+       ═══════════════════════════════════════════════════════════════ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--foreground);
+      background-color: var(--background);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       UTILITÁRIOS
+       ═══════════════════════════════════════════════════════════════ */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-padding {
+      padding: 80px 0;
+    }
+
+    @media (max-width: 768px) {
+      .section-padding {
+        padding: 60px 0;
+      }
+    }
+
+    .text-gradient {
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 32px;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      background: var(--gradient-gold);
+      color: var(--cepe-blue-dark);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .btn-green {
+      background: var(--cepe-green);
+      color: white;
+    }
+
+    .btn-green:hover {
+      background: var(--cepe-green-dark);
+      transform: translateY(-2px);
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--cepe-blue);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: 18px;
+      color: var(--muted-foreground);
+      max-width: 600px;
+    }
+
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 28px;
+      }
+      .section-subtitle {
+        font-size: 16px;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       ANIMAÇÕES
+       ═══════════════════════════════════════════════════════════════ */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes pulse-soft {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.02); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-pulse-soft {
+      animation: pulse-soft 3s ease-in-out infinite;
+    }
+
+    .animate-bounce {
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    .fade-in-up {
+      animation: fade-in-up 0.6s ease-out forwards;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════════════ */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      transition: var(--transition);
+    }
+
+    .header.scrolled {
+      background: white;
+      box-shadow: var(--shadow-soft);
+      padding: 12px 0;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo img {
+      height: 50px;
+      width: auto;
+      transition: var(--transition);
+    }
+
+    .header.scrolled .header-logo img {
+      height: 40px;
+    }
+
+    /* Logo branco (visível quando não scrolled) */
+    .logo-white { display: block; }
+    .logo-color { display: none; }
+    .header.scrolled .logo-white { display: none; }
+    .header.scrolled .logo-color { display: block; }
+
+    .nav-desktop {
+      display: none;
+      align-items: center;
+      gap: 32px;
+    }
+
+    @media (min-width: 1024px) {
+      .nav-desktop {
+        display: flex;
+      }
+    }
+
+    .nav-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--cepe-gold);
+    }
+
+    .header.scrolled .nav-link {
+      color: var(--cepe-blue);
+    }
+
+    .header.scrolled .nav-link:hover {
+      color: var(--cepe-gold);
+    }
+
+    .header-cta {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      .header-cta {
+        display: inline-flex;
+      }
+    }
+
+    /* Menu Mobile */
+    .mobile-menu-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 10px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (min-width: 1024px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+
+    .mobile-menu-btn span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: white;
+      transition: var(--transition);
+    }
+
+    .header.scrolled .mobile-menu-btn span {
+      background: var(--cepe-blue);
+    }
+
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      box-shadow: var(--shadow-card);
+      padding: 20px;
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 12px 0;
+      color: var(--cepe-blue);
+      font-weight: 500;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu .btn {
+      width: 100%;
+      margin-top: 16px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: var(--gradient-hero);
+      overflow: hidden;
+      padding-top: 80px;
+    }
+
+    .hero-bg-decoration {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      pointer-events: none;
+    }
+
+    .hero-bg-1 {
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      background: rgba(212, 175, 55, 0.1);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .hero-bg-2 {
+      top: 50%;
+      left: -50px;
+      width: 250px;
+      height: 250px;
+      background: rgba(144, 192, 51, 0.1);
+      animation: float 6s ease-in-out infinite 2s;
+    }
+
+    .hero-bg-3 {
+      bottom: 50px;
+      right: 25%;
+      width: 150px;
+      height: 150px;
+      background: rgba(255, 255, 255, 0.05);
+      animation: float 6s ease-in-out infinite 4s;
+    }
+
+    .hero-container {
+      position: relative;
+      z-index: 10;
+      padding: 60px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 48px;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .hero-content {
+      color: white;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--cepe-gold);
+      border-radius: 50%;
+      animation: pulse-soft 2s ease-in-out infinite;
+    }
+
+    .hero-title {
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 48px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-title {
+        font-size: 52px;
+      }
+    }
+
+    .hero-description {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 540px;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 640px) {
+      .hero-buttons {
+        flex-direction: row;
+      }
+    }
+
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-value {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--cepe-gold);
+    }
+
+    .hero-stat-label {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .hero-stat-divider {
+      width: 1px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Hero Image */
+    .hero-image-wrapper {
+      position: relative;
+    }
+
+    .hero-image-container {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      aspect-ratio: 4/3;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(15, 39, 68, 0.6), transparent);
+    }
+
+    .hero-floating-card {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .hero-floating-card-content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-floating-card-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--cepe-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .hero-floating-card-title {
+      font-weight: 600;
+      color: var(--cepe-blue);
+    }
+
+    .hero-floating-card-text {
+      font-size: 14px;
+      color: var(--muted-foreground);
+    }
+
+    .hero-discount-badge {
+      position: absolute;
+      top: -16px;
+      right: -16px;
+      background: var(--cepe-gold);
+      color: var(--cepe-blue-dark);
+      border-radius: 50px;
+      padding: 8px 16px;
+      font-weight: 700;
+      box-shadow: var(--shadow-glow);
+      animation: pulse-soft 3s ease-in-out infinite;
+    }
+
+    .hero-scroll-indicator {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .hero-scroll-indicator svg {
+      width: 32px;
+      height: 32px;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       PARTNERSHIP SECTION
+       ═══════════════════════════════════════════════════════════════ */
+    .partnership {
+      background: var(--muted);
+    }
+
+    .partnership-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .partnership-header .section-subtitle {
+      margin: 0 auto;
+    }
+
+    .partnership-card {
+      background: white;
+      border-radius: 24px;
+      padding: 48px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .partnership-logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+
+    .partnership-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .partnership-logo img {
+      height: 80px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .partnership-logo span {
+      font-size: 14px;
+      color: var(--muted-foreground);
+    }
+
+    .partnership-plus {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--cepe-gold);
+    }
+
+    .partnership-details {
+      display: grid;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 768px) {
+      .partnership-details {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .partnership-detail {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      background: var(--muted);
+      border-radius: 12px;
+    }
+
+    .partnership-detail-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--cepe-blue), var(--cepe-blue-light));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .partnership-detail-text h4 {
+      font-weight: 600;
+      color: var(--cepe-blue);
+      margin-bottom: 4px;
+    }
+
+    .partnership-detail-text p {
+      font-size: 14px;
+      color: var(--muted-foreground);
+    }
+
+    .partnership-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 24px;
+      background: linear-gradient(135deg, var(--cepe-gold), var(--cepe-gold-light));
+      border-radius: 12px;
+      color: var(--cepe-blue-dark);
+      font-weight: 600;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       BENEFIT SECTION
+       ═══════════════════════════════════════════════════════════════ */
+    .benefit {
+      position: relative;
+      background: var(--gradient-hero);
+      overflow: hidden;
+    }
+
+    .benefit-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .benefit-container {
+      position: relative;
+      z-index: 10;
+    }
+
+    .benefit-grid {
+      display: grid;
+      gap: 48px;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .benefit-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .benefit-content {
+      color: white;
+    }
+
+    .benefit-pretitle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--cepe-gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .benefit-title {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    @media (min-width: 768px) {
+      .benefit-title {
+        font-size: 44px;
+      }
+    }
+
+    .benefit-description {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .benefit-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .benefit-item-icon {
+      width: 24px;
+      height: 24px;
+      background: var(--cepe-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .benefit-item-icon svg {
+      width: 14px;
+      height: 14px;
+      color: var(--cepe-blue-dark);
+    }
+
+    .benefit-item p {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Discount Badge */
+    .benefit-discount {
+      display: flex;
+      justify-content: center;
+    }
+
+    .benefit-discount-card {
+      position: relative;
+      background: white;
+      border-radius: 24px;
+      padding: 48px;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      max-width: 320px;
+    }
+
+    .benefit-discount-glow {
+      position: absolute;
+      inset: -20px;
+      background: var(--cepe-gold);
+      border-radius: 32px;
+      filter: blur(40px);
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    .benefit-discount-value {
+      font-size: 96px;
+      font-weight: 800;
+      color: var(--cepe-blue);
+      line-height: 1;
+    }
+
+    .benefit-discount-percent {
+      font-size: 48px;
+    }
+
+    .benefit-discount-off {
+      display: block;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--cepe-gold);
+      margin-bottom: 8px;
+    }
+
+    .benefit-discount-label {
+      font-size: 16px;
+      color: var(--muted-foreground);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       WHY SECTION
+       ═══════════════════════════════════════════════════════════════ */
+    .why-section {
+      background: white;
+    }
+
+    .why-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .why-header .section-subtitle {
+      margin: 0 auto;
+    }
+
+    .why-grid {
+      display: grid;
+      gap: 48px;
+    }
+
+    @media (min-width: 1024px) {
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .why-card {
+      background: var(--muted);
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .why-card-image {
+      height: 240px;
+      overflow: hidden;
+    }
+
+    .why-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .why-card:hover .why-card-image img {
+      transform: scale(1.05);
+    }
+
+    .why-card-content {
+      padding: 32px;
+    }
+
+    .why-card-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--cepe-blue);
+      margin-bottom: 16px;
+    }
+
+    .why-card-description {
+      color: var(--muted-foreground);
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    .why-features {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .why-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .why-feature-icon {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cepe-blue);
+      flex-shrink: 0;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .why-feature-text h4 {
+      font-weight: 600;
+      color: var(--cepe-blue);
+      margin-bottom: 4px;
+    }
+
+    .why-feature-text p {
+      font-size: 14px;
+      color: var(--muted-foreground);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       SCHEDULE SECTION
+       ═══════════════════════════════════════════════════════════════ */
+    .schedule {
+      background: var(--muted);
+    }
+
+    .schedule-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .schedule-header .section-subtitle {
+      margin: 0 auto;
+    }
+
+    .schedule-grid {
+      display: grid;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 768px) {
+      .schedule-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .schedule-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .schedule-card-header {
+      background: var(--gradient-hero);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .schedule-card-week {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.8;
+    }
+
+    .schedule-card-title {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .schedule-card-content {
+      padding: 24px;
+    }
+
+    .schedule-card-content ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .schedule-card-content li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--muted-foreground);
+    }
+
+    .schedule-card-content li::before {
+      content: "✓";
+      color: var(--cepe-green);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .schedule-disclaimer {
+      background: var(--cepe-gold);
+      color: var(--cepe-blue-dark);
+      padding: 16px 24px;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .schedule-disclaimer strong {
+      font-weight: 600;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       TESTIMONIALS SECTION
+       ═══════════════════════════════════════════════════════════════ */
+    .testimonials {
+      background: white;
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .testimonials-header .section-subtitle {
+      margin: 0 auto;
+    }
+
+    .testimonials-content {
+      display: grid;
+      gap: 48px;
+    }
+
+    @media (min-width: 1024px) {
+      .testimonials-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+    }
+
+    .testimonials-video {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      aspect-ratio: 16/9;
+    }
+
+    .testimonials-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .testimonial-card {
+      background: var(--muted);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .testimonial-quote {
+      font-size: 18px;
+      color: var(--foreground);
+      line-height: 1.8;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .testimonial-quote::before {
+      content: """;
+      font-size: 48px;
+      color: var(--cepe-gold);
+      line-height: 0;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-stars svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--cepe-gold);
+      color: var(--cepe-gold);
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .testimonial-avatar {
+      width: 56px;
+      height: 56px;
+      background: var(--cepe-blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .testimonial-author-name {
+      font-weight: 600;
+      color: var(--cepe-blue);
+    }
+
+    .testimonial-author-info {
+      font-size: 14px;
+      color: var(--muted-foreground);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       TEST SECTION
+       ═══════════════════════════════════════════════════════════════ */
+    .test-section {
+      position: relative;
+      background: linear-gradient(135deg, var(--cepe-green), var(--cepe-green-dark));
+      overflow: hidden;
+    }
+
+    .test-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .test-container {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      color: white;
+    }
+
+    .test-icon {
+      width: 80px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+
+    .test-icon svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    .test-title {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .test-title {
+        font-size: 40px;
+      }
+    }
+
+    .test-description {
+      font-size: 18px;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+
+    .test-btn {
+      background: white;
+      color: var(--cepe-green-dark);
+      font-size: 18px;
+      padding: 20px 40px;
+    }
+
+    .test-btn:hover {
+      background: var(--muted);
+      transform: translateY(-2px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       STEPS SECTION
+       ═══════════════════════════════════════════════════════════════ */
+    .steps {
+      background: var(--muted);
+    }
+
+    .steps-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .steps-header .section-subtitle {
+      margin: 0 auto;
+    }
+
+    .steps-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .steps-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .step-card {
+      position: relative;
+      background: white;
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .step-number {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 32px;
+      height: 32px;
+      background: var(--cepe-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--cepe-blue-dark);
+      font-size: 14px;
+    }
+
+    .step-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--muted);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: var(--cepe-blue);
+    }
+
+    .step-icon svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .step-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--cepe-blue);
+      margin-bottom: 8px;
+    }
+
+    .step-description {
+      font-size: 14px;
+      color: var(--muted-foreground);
+      line-height: 1.6;
+    }
+
+    /* Connector lines */
+    .step-connector {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      .step-connector {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: -12px;
+        width: 24px;
+        height: 2px;
+        background: var(--border);
+      }
+      
+      .step-card:last-child .step-connector {
+        display: none;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       FORM SECTION
+       ═══════════════════════════════════════════════════════════════ */
+    .form-section {
+      position: relative;
+      background: white;
+      overflow: hidden;
+    }
+
+    .form-bg-decoration {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: var(--gradient-hero);
+      clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    @media (max-width: 1023px) {
+      .form-bg-decoration {
+        display: none;
+      }
+    }
+
+    .form-container {
+      position: relative;
+      z-index: 10;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 48px;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .form-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .form-content h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--cepe-blue);
+      margin-bottom: 16px;
+    }
+
+    .form-content-highlight {
+      color: var(--cepe-gold);
+    }
+
+    .form-content p {
+      font-size: 18px;
+      color: var(--muted-foreground);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .form-benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-benefit {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .form-benefit-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--cepe-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .form-benefit-icon svg {
+      width: 16px;
+      height: 16px;
+      color: var(--cepe-blue-dark);
+    }
+
+    .form-benefit span {
+      font-weight: 500;
+      color: var(--foreground);
+    }
+
+    /* Form Card */
+    .form-card {
+      background: white;
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: var(--shadow-card);
+    }
+
+    @media (min-width: 1024px) {
+      .form-card {
+        margin-left: 48px;
+      }
+    }
+
+    .form-card h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--cepe-blue);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--foreground);
+      margin-bottom: 8px;
+    }
+
+    .form-label .required {
+      color: #ef4444;
+    }
+
+    .form-input,
+    .form-select {
+      width: 100%;
+      padding: 14px 16px;
+      font-family: inherit;
+      font-size: 16px;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      background: white;
+      color: var(--foreground);
+      transition: var(--transition);
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+      outline: none;
+      border-color: var(--cepe-blue);
+      box-shadow: 0 0 0 4px rgba(26, 54, 93, 0.1);
+    }
+
+    .form-input::placeholder {
+      color: var(--muted-foreground);
+    }
+
+    .form-input.error,
+    .form-select.error {
+      border-color: #ef4444;
+    }
+
+    .form-error {
+      font-size: 12px;
+      color: #ef4444;
+      margin-top: 4px;
+      display: none;
+    }
+
+    .form-error.visible {
+      display: block;
+    }
+
+    .form-checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .form-checkbox {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      flex-shrink: 0;
+      accent-color: var(--cepe-blue);
+    }
+
+    .form-checkbox-label {
+      font-size: 14px;
+      color: var(--muted-foreground);
+      line-height: 1.5;
+    }
+
+    .form-checkbox-label a {
+      color: var(--cepe-blue);
+      text-decoration: underline;
+    }
+
+    .form-submit {
+      width: 100%;
+      font-size: 18px;
+      padding: 18px;
+    }
+
+    .form-submit:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .form-success.visible {
+      display: block;
+    }
+
+    .form-success-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--cepe-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+
+    .form-success-icon svg {
+      width: 40px;
+      height: 40px;
+      color: white;
+    }
+
+    .form-success h4 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--cepe-blue);
+      margin-bottom: 12px;
+    }
+
+    .form-success p {
+      color: var(--muted-foreground);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       FAQ SECTION
+       ═══════════════════════════════════════════════════════════════ */
+    .faq {
+      background: var(--muted);
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .faq-header .section-subtitle {
+      margin: 0 auto;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 24px;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--cepe-blue);
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      transition: var(--transition);
+    }
+
+    .faq-question:hover {
+      background: var(--muted);
+    }
+
+    .faq-question svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-question svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-answer-content {
+      padding: 0 24px 20px;
+      color: var(--muted-foreground);
+      line-height: 1.7;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════════ */
+    .footer {
+      background: var(--cepe-blue-dark);
+      color: white;
+      padding: 64px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+    }
+
+    .footer-brand img {
+      height: 60px;
+      margin-bottom: 20px;
+    }
+
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .footer-social a:hover {
+      background: var(--cepe-gold);
+      color: var(--cepe-blue-dark);
+    }
+
+    .footer-social svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .footer-column h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--cepe-gold);
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+    }
+
+    .footer-contact-item svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--cepe-gold);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--cepe-gold);
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+
+    .footer-copyright {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-legal a {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      transition: var(--transition);
+    }
+
+    .footer-legal a:hover {
+      color: var(--cepe-gold);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="#" class="header-logo">
+        <!-- SUBSTITUIR: [IMG_LOGO_CEPE_BRANCO] - Logo branco para fundo escuro -->
+        <img src="https://placehold.co/180x50/1a365d/ffffff?text=CEPE+Logo" alt="CEPE Idiomas" class="logo-white">
+        <!-- SUBSTITUIR: [IMG_LOGO_CEPE_COR] - Logo colorido para fundo claro -->
+        <img src="https://placehold.co/180x50/ffffff/1a365d?text=CEPE+Logo" alt="CEPE Idiomas" class="logo-color">
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="#parceria" class="nav-link">Parceria</a>
+        <a href="#beneficio" class="nav-link">Benefício</a>
+        <a href="#porque" class="nav-link">Por Que Córdoba</a>
+        <a href="#cronograma" class="nav-link">Cronograma</a>
+        <a href="#depoimentos" class="nav-link">Depoimentos</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <a href="#formulario" class="btn btn-primary header-cta">Quero o Desconto</a>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="mobile-menu" id="mobile-menu">
+        <a href="#parceria">Parceria</a>
+        <a href="#beneficio">Benefício</a>
+        <a href="#porque">Por Que Córdoba</a>
+        <a href="#cronograma">Cronograma</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">FAQ</a>
+        <a href="#formulario" class="btn btn-primary">Quero o Desconto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-decoration hero-bg-1 animate-float"></div>
+    <div class="hero-bg-decoration hero-bg-2 animate-float"></div>
+    <div class="hero-bg-decoration hero-bg-3 animate-float"></div>
+
+    <div class="container hero-container">
+      <div class="hero-grid">
+        <div class="hero-content fade-in-up">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Parceria Exclusiva AMAGIS
+          </div>
+
+          <h1 class="hero-title">
+            AMAGIS e CEPE Idiomas: <span class="text-gradient">Seu Intercâmbio em Córdoba</span> com 15% de Desconto Exclusivo!
+          </h1>
+
+          <p class="hero-description">
+            Uma parceria que abre as portas do mundo para associados, dependentes e colaboradores AMAGIS. 
+            Viva uma imersão cultural e linguística inesquecível na vibrante Argentina!
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#formulario" class="btn btn-primary">
+              Quero Meu Desconto Exclusivo!
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+            <a href="#depoimentos" class="btn btn-outline">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              Ver Vídeo
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <p class="hero-stat-value">15%</p>
+              <p class="hero-stat-label">Desconto</p>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <p class="hero-stat-value">2-4</p>
+              <p class="hero-stat-label">Semanas</p>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <p class="hero-stat-value">100%</p>
+              <p class="hero-stat-label">Imersão</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper fade-in-up" style="animation-delay: 0.3s;">
+          <div class="hero-image-container">
+            <!-- SUBSTITUIR: [IMG_HERO] - Foto dos estudantes CEPE -->
+            <img src="https://placehold.co/800x600/1a365d/ffffff?text=Estudantes+CEPE" alt="Estudantes CEPE Idiomas em Córdoba, Argentina" class="hero-image">
+            <div class="hero-image-overlay"></div>
+            
+            <div class="hero-floating-card">
+              <div class="hero-floating-card-content">
+                <div class="hero-floating-card-icon">✈️</div>
+                <div>
+                  <p class="hero-floating-card-title">Córdoba, Argentina</p>
+                  <p class="hero-floating-card-text">Imersão cultural e linguística</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-discount-badge animate-pulse-soft">-15% OFF</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       PARTNERSHIP SECTION
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="partnership section-padding" id="parceria">
+    <div class="container">
+      <div class="partnership-header">
+        <h2 class="section-title">Uma Parceria de Excelência</h2>
+        <p class="section-subtitle">
+          A AMAGIS firmou uma parceria exclusiva com a CEPE Idiomas para proporcionar aos seus associados, 
+          dependentes e colaboradores uma experiência única de aprendizado de espanhol na Argentina.
+        </p>
+      </div>
+
+      <div class="partnership-card">
+        <div class="partnership-logos">
+          <div class="partnership-logo">
+            <!-- SUBSTITUIR: [IMG_LOGO_AMAGIS] - Logo da AMAGIS -->
+            <img src="https://placehold.co/200x80/ffffff/1a365d?text=AMAGIS" alt="Logo AMAGIS">
+            <span>Associação dos Magistrados</span>
+          </div>
+          <span class="partnership-plus">+</span>
+          <div class="partnership-logo">
+            <!-- SUBSTITUIR: [IMG_LOGO_CEPE_COR] - Logo CEPE colorido -->
+            <img src="https://placehold.co/200x80/ffffff/1a365d?text=CEPE+Idiomas" alt="Logo CEPE Idiomas">
+            <span>Escola de Espanhol</span>
+          </div>
+        </div>
+
+        <div class="partnership-details">
+          <div class="partnership-detail">
+            <div class="partnership-detail-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="partnership-detail-text">
+              <h4>Para Quem?</h4>
+              <p>Associados, dependentes e colaboradores AMAGIS</p>
+            </div>
+          </div>
+          <div class="partnership-detail">
+            <div class="partnership-detail-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="partnership-detail-text">
+              <h4>Duração</h4>
+              <p>Programas de 2, 3 ou 4 semanas</p>
+            </div>
+          </div>
+          <div class="partnership-detail">
+            <div class="partnership-detail-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="partnership-detail-text">
+              <h4>Imersão Total</h4>
+              <p>20 horas semanais de aulas + atividades culturais</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="partnership-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          Parceria Exclusiva AMAGIS + CEPE Idiomas
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       BENEFIT SECTION
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="benefit section-padding" id="beneficio">
+    <div class="benefit-pattern"></div>
+    <div class="container benefit-container">
+      <div class="benefit-grid">
+        <div class="benefit-content">
+          <div class="benefit-pretitle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+            Benefício Exclusivo
+          </div>
+          <h2 class="benefit-title">
+            <span class="text-gradient">15% de Desconto</span> Exclusivo para Você!
+          </h2>
+          <p class="benefit-description">
+            Como associado, dependente ou colaborador AMAGIS, você tem acesso a um desconto especial 
+            que torna seu intercâmbio ainda mais acessível. Uma oportunidade única de investir no seu futuro!
+          </p>
+          <ul class="benefit-list">
+            <li class="benefit-item">
+              <span class="benefit-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p>Desconto aplicado sobre o valor total do programa</p>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p>Válido para associados, dependentes e colaboradores</p>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p>Condições especiais de pagamento disponíveis</p>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p>Suporte personalizado durante todo o processo</p>
+            </li>
+          </ul>
+          <a href="#formulario" class="btn btn-primary">Garanta Seu Desconto!</a>
+        </div>
+
+        <div class="benefit-discount">
+          <div class="benefit-discount-card">
+            <div class="benefit-discount-glow"></div>
+            <p class="benefit-discount-value">15<span class="benefit-discount-percent">%</span></p>
+            <span class="benefit-discount-off">OFF</span>
+            <p class="benefit-discount-label">Desconto Exclusivo AMAGIS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       WHY SECTION
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="why-section section-padding" id="porque">
+    <div class="container">
+      <div class="why-header">
+        <h2 class="section-title">Por Que Escolher Córdoba e a CEPE?</h2>
+        <p class="section-subtitle">
+          Descubra os motivos que fazem de Córdoba o destino ideal e da CEPE a escola perfeita para sua imersão em espanhol.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <!-- Por Que Córdoba -->
+        <div class="why-card">
+          <div class="why-card-image">
+            <!-- SUBSTITUIR: [IMG_CORDOBA] - Foto da praça de Córdoba -->
+            <img src="https://placehold.co/600x300/1a365d/ffffff?text=Córdoba+Argentina" alt="Plaza de Córdoba, Argentina">
+          </div>
+          <div class="why-card-content">
+            <h3 class="why-card-title">Por Que Córdoba é o Destino Perfeito?</h3>
+            <p class="why-card-description">
+              Córdoba é a segunda maior cidade da Argentina e um polo universitário vibrante, 
+              oferecendo a combinação ideal de cultura, história e vida noturna.
+            </p>
+            <div class="why-features">
+              <div class="why-feature">
+                <div class="why-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="why-feature-text">
+                  <h4>Localização Estratégica</h4>
+                  <p>Centro da Argentina, fácil acesso a outras regiões</p>
+                </div>
+              </div>
+              <div class="why-feature">
+                <div class="why-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                </div>
+                <div class="why-feature-text">
+                  <h4>Rica Cultura</h4>
+                  <p>Museus, teatros, arquitetura colonial e vida cultural intensa</p>
+                </div>
+              </div>
+              <div class="why-feature">
+                <div class="why-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="why-feature-text">
+                  <h4>Custo-Benefício</h4>
+                  <p>Cidade acessível com excelente qualidade de vida</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CEPE Idiomas -->
+        <div class="why-card">
+          <div class="why-card-image">
+            <!-- SUBSTITUIR: [IMG_CEPE_SALA] - Foto da sala de aula CEPE -->
+            <img src="https://placehold.co/600x300/1a365d/ffffff?text=CEPE+Sala+de+Aula" alt="Sala de aula CEPE Idiomas">
+          </div>
+          <div class="why-card-content">
+            <h3 class="why-card-title">CEPE Idiomas: Excelência no Ensino</h3>
+            <p class="why-card-description">
+              Com mais de 30 anos de experiência, a CEPE é referência no ensino de espanhol para estrangeiros, 
+              combinando metodologia moderna com imersão cultural completa.
+            </p>
+            <div class="why-features">
+              <div class="why-feature">
+                <div class="why-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </div>
+                <div class="why-feature-text">
+                  <h4>Professores Qualificados</h4>
+                  <p>Nativos especializados no ensino para estrangeiros</p>
+                </div>
+              </div>
+              <div class="why-feature">
+                <div class="why-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="why-feature-text">
+                  <h4>Turmas Reduzidas</h4>
+                  <p>Máximo de 8 alunos para atenção personalizada</p>
+                </div>
+              </div>
+              <div class="why-feature">
+                <div class="why-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                </div>
+                <div class="why-feature-text">
+                  <h4>Certificação Internacional</h4>
+                  <p>Certificado reconhecido internacionalmente</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SCHEDULE SECTION
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="schedule section-padding" id="cronograma">
+    <div class="container">
+      <div class="schedule-header">
+        <h2 class="section-title">Cronograma do Programa</h2>
+        <p class="section-subtitle">
+          Confira como serão organizadas suas semanas de imersão em Córdoba, 
+          com aulas intensivas e atividades culturais.
+        </p>
+      </div>
+
+      <div class="schedule-grid">
+        <!-- Semana 1 -->
+        <div class="schedule-card">
+          <div class="schedule-card-header">
+            <p class="schedule-card-week">Semana 1</p>
+            <h3 class="schedule-card-title">Adaptação e Fundamentos</h3>
+          </div>
+          <div class="schedule-card-content">
+            <ul>
+              <li>Recepção e orientação inicial</li>
+              <li>Teste de nivelamento</li>
+              <li>Aulas de espanhol (20h)</li>
+              <li>City tour por Córdoba</li>
+              <li>Jantar de boas-vindas</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Semana 2 -->
+        <div class="schedule-card">
+          <div class="schedule-card-header">
+            <p class="schedule-card-week">Semana 2</p>
+            <h3 class="schedule-card-title">Imersão e Prática</h3>
+          </div>
+          <div class="schedule-card-content">
+            <ul>
+              <li>Aulas intensivas de conversação</li>
+              <li>Visita a vinícolas da região</li>
+              <li>Intercâmbio com estudantes locais</li>
+              <li>Aulas de tango</li>
+              <li>Visita a museus e centros culturais</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Semana 3 -->
+        <div class="schedule-card">
+          <div class="schedule-card-header">
+            <p class="schedule-card-week">Semana 3</p>
+            <h3 class="schedule-card-title">Consolidação</h3>
+          </div>
+          <div class="schedule-card-content">
+            <ul>
+              <li>Projeto final de conversação</li>
+              <li>Excursão às Sierras de Córdoba</li>
+              <li>Apresentações em espanhol</li>
+              <li>Avaliação final e feedback</li>
+              <li>Cerimônia de certificação</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="schedule-disclaimer">
+        <strong>⚠️ Importante:</strong> Este é um cronograma ilustrativo. A programação real pode variar de acordo com o período escolhido e condições locais.
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       TESTIMONIALS SECTION
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="testimonials section-padding" id="depoimentos">
+    <div class="container">
+      <div class="testimonials-header">
+        <h2 class="section-title">O Que Dizem Nossos Alunos</h2>
+        <p class="section-subtitle">
+          Conheça as experiências de quem já viveu a imersão CEPE em Córdoba e transformou seu espanhol.
+        </p>
+      </div>
+
+      <div class="testimonials-content">
+        <!-- Video Embed -->
+        <div class="testimonials-video">
+          <iframe 
+            src="https://www.canva.com/design/DAGW-g2Y920/cz8-Hnn5NZ1C_aBwUgm7hQ/watch?embed" 
+            allowfullscreen="allowfullscreen" 
+            allow="fullscreen"
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <!-- Testimonial Card -->
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            A experiência na CEPE superou todas as minhas expectativas. Em apenas 3 semanas, 
+            meu espanhol evoluiu mais do que em anos de estudo tradicional. A imersão cultural 
+            é incrível e os professores são excepcionais!
+          </p>
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MC</div>
+            <div>
+              <p class="testimonial-author-name">Maria Clara</p>
+              <p class="testimonial-author-info">Advogada • Programa de 3 semanas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       TEST SECTION
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="test-section section-padding" id="teste">
+    <div class="test-pattern"></div>
+    <div class="container test-container">
+      <div class="test-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+      </div>
+      <h2 class="test-title">Descubra Seu Nível de Espanhol!</h2>
+      <p class="test-description">
+        Faça nosso teste gratuito e descubra em qual nível você se encontra. 
+        Isso nos ajudará a personalizar sua experiência de aprendizado!
+      </p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_fK7U7M3VZBPjN1FZJ8JvzKKQhWEUWWNLqKOTLpBs8d0_LA/viewform" target="_blank" rel="noopener noreferrer" class="btn test-btn">
+        Fazer Teste Gratuito de Espanhol!
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       STEPS SECTION
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="steps section-padding" id="como-aproveitar">
+    <div class="container">
+      <div class="steps-header">
+        <h2 class="section-title">Como Aproveitar Seu Desconto</h2>
+        <p class="section-subtitle">
+          Siga estes passos simples para garantir seu desconto exclusivo e iniciar sua jornada de aprendizado.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <!-- Passo 1 -->
+        <div class="step-card">
+          <span class="step-number">1</span>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3 class="step-title">Preencha o Formulário</h3>
+          <p class="step-description">Complete o formulário abaixo com seus dados para manifestar interesse no programa.</p>
+          <div class="step-connector"></div>
+        </div>
+
+        <!-- Passo 2 -->
+        <div class="step-card">
+          <span class="step-number">2</span>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h3 class="step-title">Aguarde Nosso Contato</h3>
+          <p class="step-description">Nossa equipe entrará em contato em até 48 horas úteis para discutir as opções.</p>
+          <div class="step-connector"></div>
+        </div>
+
+        <!-- Passo 3 -->
+        <div class="step-card">
+          <span class="step-number">3</span>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3 class="step-title">Escolha Suas Datas</h3>
+          <p class="step-description">Defina o período ideal para sua imersão e receba uma proposta personalizada.</p>
+          <div class="step-connector"></div>
+        </div>
+
+        <!-- Passo 4 -->
+        <div class="step-card">
+          <span class="step-number">4</span>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/><circle cx="12" cy="12" r="10"/></svg>
+          </div>
+          <h3 class="step-title">Confirme e Viaje!</h3>
+          <p class="step-description">Finalize sua inscrição com o desconto exclusivo e prepare-se para a aventura!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FORM SECTION
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="form-section section-padding" id="formulario">
+    <div class="form-bg-decoration"></div>
+    <div class="container form-container">
+      <div class="form-grid">
+        <div class="form-content">
+          <h2>Garanta Seu <span class="form-content-highlight">Desconto de 15%</span> Agora!</h2>
+          <p>
+            Preencha o formulário ao lado e nossa equipe entrará em contato para ajudá-lo a planejar 
+            sua experiência de intercâmbio em Córdoba. Não perca esta oportunidade exclusiva!
+          </p>
+          <div class="form-benefits">
+            <div class="form-benefit">
+              <span class="form-benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span>Desconto exclusivo de 15%</span>
+            </div>
+            <div class="form-benefit">
+              <span class="form-benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span>Atendimento personalizado</span>
+            </div>
+            <div class="form-benefit">
+              <span class="form-benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span>Suporte completo na preparação</span>
+            </div>
+            <div class="form-benefit">
+              <span class="form-benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span>Condições especiais de pagamento</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Receba Seu Desconto</h3>
+          
+          <!-- Formulário -->
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label">Nome Completo <span class="required">*</span></label>
+              <input type="text" class="form-input" name="nome" placeholder="Seu nome completo" required>
+              <p class="form-error">Por favor, informe seu nome</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">E-mail <span class="required">*</span></label>
+              <input type="email" class="form-input" name="email" placeholder="seu@email.com" required>
+              <p class="form-error">Por favor, informe um e-mail válido</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Telefone com DDD <span class="required">*</span></label>
+              <input type="tel" class="form-input" name="telefone" placeholder="(00) 00000-0000" required>
+              <p class="form-error">Por favor, informe seu telefone</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Relação com AMAGIS <span class="required">*</span></label>
+              <select class="form-select" name="relacao" required>
+                <option value="">Selecione uma opção</option>
+                <option value="Associado">Associado</option>
+                <option value="Dependente">Dependente</option>
+                <option value="Colaborador">Colaborador</option>
+              </select>
+              <p class="form-error">Por favor, selecione sua relação com AMAGIS</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Duração Preferencial <span class="required">*</span></label>
+              <select class="form-select" name="duracao" required>
+                <option value="">Selecione uma opção</option>
+                <option value="2 semanas">2 semanas</option>
+                <option value="3 semanas">3 semanas</option>
+                <option value="4 semanas">4 semanas</option>
+              </select>
+              <p class="form-error">Por favor, selecione a duração preferencial</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Cidade de Origem</label>
+              <input type="text" class="form-input" name="cidade" placeholder="Sua cidade">
+            </div>
+
+            <div class="form-checkbox-group">
+              <input type="checkbox" class="form-checkbox" id="privacy" name="privacy" required>
+              <label class="form-checkbox-label" for="privacy">
+                Concordo com a <a href="https://cepeidiomas.com.br/politica-de-privacidade" target="_blank">Política de Privacidade</a> 
+                e autorizo o contato da CEPE Idiomas. <span class="required">*</span>
+              </label>
+            </div>
+            <p class="form-error" id="privacy-error">Você precisa aceitar a política de privacidade</p>
+
+            <button type="submit" class="btn btn-primary form-submit" id="submit-btn">
+              Receber Meu Desconto e Contato!
+            </button>
+          </form>
+
+          <!-- Mensagem de Sucesso -->
+          <div class="form-success" id="form-success">
+            <div class="form-success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h4>Formulário Enviado com Sucesso!</h4>
+            <p>Nossa equipe entrará em contato em breve para ajudá-lo a planejar sua experiência.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FAQ SECTION
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="faq section-padding" id="faq">
+    <div class="container">
+      <div class="faq-header">
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <p class="section-subtitle">
+          Tire suas dúvidas sobre o programa de intercâmbio e a parceria AMAGIS + CEPE Idiomas.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            Quem pode aproveitar o desconto de 15%?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              O desconto exclusivo de 15% é válido para associados da AMAGIS, seus dependentes diretos e colaboradores 
+              da associação. É necessário comprovar o vínculo no momento da inscrição.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            O que está incluído no programa?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              O programa inclui: aulas de espanhol (20h semanais), material didático, atividades culturais, 
+              certificado de conclusão, suporte local e assistência na organização da viagem. Hospedagem e 
+              passagem aérea podem ser contratados separadamente ou através de parceiros da CEPE.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            Preciso ter conhecimento prévio de espanhol?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Não! A CEPE oferece turmas para todos os níveis, desde iniciante até avançado. No primeiro dia, 
+              você fará um teste de nivelamento para ser colocado na turma mais adequada ao seu conhecimento atual.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            Quais são as formas de pagamento?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Oferecemos diversas opções de pagamento: à vista com desconto adicional, parcelamento no cartão 
+              de crédito em até 12x, ou boleto bancário. Entre em contato para conhecer as condições especiais 
+              disponíveis para membros AMAGIS.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            Como funciona a hospedagem?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              A CEPE oferece diferentes opções de hospedagem: casas de família (para imersão total), 
+              apartamentos compartilhados ou privativos, e hotéis parceiros. Cada opção tem características 
+              e valores diferentes, e nossa equipe pode ajudá-lo a escolher a melhor para você.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            O desconto pode ser combinado com outras promoções?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              O desconto de 15% da parceria AMAGIS é exclusivo e não cumulativo com outras promoções vigentes. 
+              Entretanto, condições especiais de pagamento e benefícios adicionais podem ser negociados 
+              diretamente com nossa equipe.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            Qual a melhor época para fazer o intercâmbio?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Córdoba tem clima agradável o ano todo. A primavera (setembro-novembro) e o outono (março-maio) 
+              são considerados os melhores períodos, com temperaturas amenas. O verão pode ser quente e o 
+              inverno mais frio, mas a cidade tem atrações em todas as estações.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <!-- SUBSTITUIR: [IMG_LOGO_CEPE_BRANCO] - Logo branco -->
+          <img src="https://placehold.co/180x60/0f2744/ffffff?text=CEPE+Idiomas" alt="CEPE Idiomas">
+          <p>
+            Há mais de 30 anos transformando vidas através do ensino de espanhol. 
+            Sua imersão linguística e cultural começa aqui.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/cepecordoba/?utm_source=site&utm_medium=landingpage&utm_campaign=amagis_parceria" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/cepeidiomasintercambio?utm_source=site&utm_medium=landingpage&utm_campaign=amagis_parceria" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/school/cepeidiomas/?utm_source=site&utm_medium=landingpage&utm_campaign=amagis_parceria" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contato -->
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>contato@cepeidiomas.com.br</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+55 (31) 99999-0000</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Córdoba, Argentina</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-column">
+          <h4>Links Úteis</h4>
+          <div class="footer-links">
+            <a href="#parceria">Parceria</a>
+            <a href="#beneficio">Benefício</a>
+            <a href="#porque">Por Que Córdoba</a>
+            <a href="#cronograma">Cronograma</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#faq">FAQ</a>
+            <a href="https://cepeidiomas.com.br" target="_blank">Site CEPE</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2025 CEPE Idiomas. Todos os direitos reservados.</p>
+        <div class="footer-legal">
+          <a href="https://cepeidiomas.com.br/politica-de-privacidade" target="_blank">Política de Privacidade</a>
+          <a href="https://cepeidiomas.com.br/termos-de-uso" target="_blank">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       JAVASCRIPT
+       ═══════════════════════════════════════════════════════════════ -->
+  <script>
+    // ═══════════════════════════════════════════════════════════════
+    // HEADER - Efeito de scroll e menu mobile
+    // ═══════════════════════════════════════════════════════════════
+    const header = document.getElementById('header');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    mobileMenuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    // ═══════════════════════════════════════════════════════════════
+    // SMOOTH SCROLL - Navegação suave para âncoras
+    // ═══════════════════════════════════════════════════════════════
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target) {
+          const headerOffset = 80;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // ═══════════════════════════════════════════════════════════════
+    // FAQ ACCORDION
+    // ═══════════════════════════════════════════════════════════════
+    document.querySelectorAll('.faq-question').forEach(function(button) {
+      button.addEventListener('click', function() {
+        const item = this.parentElement;
+        const answer = item.querySelector('.faq-answer');
+        const isActive = item.classList.contains('active');
+
+        // Close all items
+        document.querySelectorAll('.faq-item').forEach(function(faqItem) {
+          faqItem.classList.remove('active');
+          faqItem.querySelector('.faq-answer').style.maxHeight = null;
+        });
+
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+          item.classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // ═══════════════════════════════════════════════════════════════
+    // FORM - Validação e envio para Google Sheets
+    // ═══════════════════════════════════════════════════════════════
+    const form = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formSuccess = document.getElementById('form-success');
+    const privacyError = document.getElementById('privacy-error');
+
+    // URL do Google Apps Script (já configurado)
+    const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbyfXvsjNaANTp93h03rSNH2UEgQE8EIWJ4vsvDqLOzCwRWjcdstVfGiVN2k2pNwVpDwUg/exec';
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      // Limpar erros anteriores
+      document.querySelectorAll('.form-input, .form-select').forEach(function(input) {
+        input.classList.remove('error');
+      });
+      document.querySelectorAll('.form-error').forEach(function(error) {
+        error.classList.remove('visible');
+      });
+
+      // Validar campos obrigatórios
+      let isValid = true;
+      const requiredFields = form.querySelectorAll('[required]');
+      
+      requiredFields.forEach(function(field) {
+        if (!field.value.trim() && field.type !== 'checkbox') {
+          field.classList.add('error');
+          field.nextElementSibling.classList.add('visible');
+          isValid = false;
+        }
+      });
+
+      // Validar checkbox de privacidade
+      const privacyCheckbox = document.getElementById('privacy');
+      if (!privacyCheckbox.checked) {
+        privacyError.classList.add('visible');
+        isValid = false;
+      }
+
+      // Validar email
+      const emailField = form.querySelector('[name="email"]');
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (emailField.value && !emailRegex.test(emailField.value)) {
+        emailField.classList.add('error');
+        emailField.nextElementSibling.classList.add('visible');
+        isValid = false;
+      }
+
+      if (!isValid) return;
+
+      // Desabilitar botão durante envio
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+
+      // Preparar dados
+      const formData = {
+        'Nome Completo': form.querySelector('[name="nome"]').value.trim(),
+        'E-mail': form.querySelector('[name="email"]').value.trim(),
+        'Telefone': form.querySelector('[name="telefone"]').value.trim(),
+        'Relação com AMAGIS': form.querySelector('[name="relacao"]').value,
+        'Duração Preferencial': form.querySelector('[name="duracao"]').value,
+        'Cidade de Origem': form.querySelector('[name="cidade"]').value.trim() || 'Não informado'
+      };
+
+      try {
+        // Enviar para Google Sheets
+        await fetch(GOOGLE_SHEETS_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+
+        // Mostrar mensagem de sucesso
+        form.style.display = 'none';
+        formSuccess.classList.add('visible');
+
+      } catch (error) {
+        console.error('Erro ao enviar formulário:', error);
+        alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Receber Meu Desconto e Contato!';
+      }
+    });
+
+    // ═══════════════════════════════════════════════════════════════
+    // ANIMAÇÕES ON SCROLL (opcional - comentado para performance)
+    // ═══════════════════════════════════════════════════════════════
+    /*
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-up');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(function(section) {
+      observer.observe(section);
+    });
+    */
+  </script>
+
+</body>
+</html>
