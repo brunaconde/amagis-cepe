@@ -4,7 +4,7 @@ import { BookOpen, ArrowRight } from "lucide-react";
 const TestSection = () => {
   return (
     <section
-      className="section-padding bg-gradient-to-br from-cepe-green to-cepe-green-light relative overflow-hidden"
+      className="section-padding bg-gradient-to-br from-cepe-green to-cepe-green-light relative overflow-hidden w-full"
       id="teste"
     >
       {/* Background decoration */}
