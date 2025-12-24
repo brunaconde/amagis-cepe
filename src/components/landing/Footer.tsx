@@ -9,11 +9,7 @@ const Footer = () => {
           {/* Logo and description */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
-              <img 
-                src={logoCepeWhite} 
-                alt="CEPE Idiomas" 
-                className="h-10 w-auto"
-              />
+              <img src={logoCepeWhite} alt="CEPE Idiomas" className="h-10 w-auto" />
             </div>
             <p className="text-primary-foreground/80 mb-4 max-w-md">
               Transformando vidas através do aprendizado de idiomas há mais de 15 anos. Parceria oficial com a AMAGIS
@@ -57,7 +53,7 @@ const Footer = () => {
                   className="flex items-center gap-2 text-primary-foreground/80 hover:text-cepe-gold transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  cursos@cepeidiomas.com.br
+                  amagis@cepeidiomas.com.br
                 </a>
               </li>
               <li>
@@ -66,7 +62,7 @@ const Footer = () => {
                   className="flex items-center gap-2 text-primary-foreground/80 hover:text-cepe-gold transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  (xx) 9999-9999
+                  (31) 99519-5407
                 </a>
               </li>
               <li>
