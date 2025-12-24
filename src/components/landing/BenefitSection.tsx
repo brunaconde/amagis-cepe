@@ -17,7 +17,7 @@ const BenefitSection = () => {
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="text-primary-foreground space-y-6">
+          <div className="text-primary-foreground space-y-6 min-w-0 max-w-full">
             <div className="inline-flex items-center gap-2 bg-cepe-gold/20 text-cepe-gold rounded-full px-4 py-2 text-sm font-medium">
               <Gift className="w-4 h-4" />
               Oferta Especial
@@ -45,7 +45,12 @@ const BenefitSection = () => {
               ))}
             </ul>
 
-            <Button variant="hero" size="xl" onClick={scrollToForm}>
+            <Button 
+              variant="hero" 
+              size="xl" 
+              onClick={scrollToForm}
+              className="w-full sm:w-auto max-w-full whitespace-normal text-center leading-snug h-auto py-4 px-6 sm:px-10"
+            >
               Clique aqui e garanta seu desconto!
             </Button>
           </div>
