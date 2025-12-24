@@ -7,7 +7,7 @@ const BenefitSection = () => {
     });
   };
   return (
-    <section className="section-padding bg-cepe-blue-dark relative overflow-hidden" id="beneficio">
+    <section className="section-padding bg-cepe-blue-dark relative overflow-hidden w-full" id="beneficio">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,_hsl(var(--cepe-gold))_0%,_transparent_50%)]" />
