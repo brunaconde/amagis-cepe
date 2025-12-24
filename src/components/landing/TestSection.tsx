@@ -28,14 +28,14 @@ const TestSection = () => {
             passo para planejar seu intercâmbio com o CEPE Idiomas.
           </p>
 
-          <Button asChild variant="hero" size="xl" className="group">
+          <Button asChild variant="hero" size="xl" className="group w-full sm:w-auto max-w-full whitespace-normal text-center leading-snug h-auto py-4 px-6 sm:px-10 flex flex-wrap justify-center">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSeawCT1cCEPHETCf00h1rbYQ4b9XjnuwN1-bGJmgNkrNzHNug/viewform"
               target="_blank"
               rel="noopener noreferrer"
             >
               Fazer Teste Gratuito de Espanhol!
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </a>
           </Button>
         </div>
