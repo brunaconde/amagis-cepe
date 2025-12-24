@@ -51,7 +51,7 @@ const BenefitSection = () => {
           </div>
 
           {/* Discount badge */}
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center overflow-hidden">
             <div className="relative">
               {/* Glow effect */}
               <div className="absolute inset-0 bg-cepe-gold blur-3xl opacity-30 rounded-full scale-110" />
